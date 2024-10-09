@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://bub3oexuuwpos"]
+
+[ext_resource type="Script" path="res://src/main/scripts/classes/job.gd" id="1_jrkc1"]
+[ext_resource type="Texture2D" uid="uid://b4wii7gal8elb" path="res://assets/job_icon/beggar_icon.webp" id="1_p42oq"]
+
+[resource]
+script = ExtResource("1_jrkc1")
+icon = ExtResource("1_p42oq")
+job_title = "Beggar"
+salary = 4
+level = 1
+psi_perle = 0.7
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.25

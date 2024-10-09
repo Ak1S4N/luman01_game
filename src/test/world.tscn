@@ -1,0 +1,262 @@
+[gd_scene load_steps=19 format=3 uid="uid://dup4ea7iiuvqh"]
+
+[ext_resource type="Texture2D" uid="uid://c2gp1qbcfe2k8" path="res://assets/map/top_down_village.webp" id="1_3kkdy"]
+[ext_resource type="Shader" path="res://src/test/blur.gdshader" id="1_35gy2"]
+[ext_resource type="Script" path="res://src/test/world.gd" id="1_nr7jh"]
+[ext_resource type="Texture2D" uid="uid://chsytccqs5ojh" path="res://assets/places/guild_hall/guild_hall.PNG" id="3_m8ud6"]
+[ext_resource type="Texture2D" uid="uid://btl8885gai0e3" path="res://assets/ui_icons/inventory_no_bg.png" id="3_msh78"]
+[ext_resource type="Texture2D" uid="uid://bhgfgafkabiel" path="res://assets/places/shop/shop.png" id="4_x7ixc"]
+[ext_resource type="Texture2D" uid="uid://h4gy7k5n7li" path="res://assets/places/shop/shop_hl.png" id="5_d4p15"]
+[ext_resource type="Texture2D" uid="uid://tipvdr6q3b7f" path="res://assets/places/shop/shop_clicked.png" id="5_pvn8y"]
+[ext_resource type="Texture2D" uid="uid://bxbh6s0pgvo0v" path="res://assets/character_icons/reference_1.jpg" id="5_t3vbu"]
+[ext_resource type="Texture2D" uid="uid://devmtob30mipf" path="res://assets/places/guild_hall/guild_hall._selectedpng.png" id="7_v3nwm"]
+[ext_resource type="Texture2D" uid="uid://b57eq3bbvyq8a" path="res://assets/places/blacksmith/blacksmith.png" id="8_ajf8m"]
+[ext_resource type="Texture2D" uid="uid://q1bljctryqm" path="res://assets/places/guild_hall/guild_hall_hl.png" id="8_wjloe"]
+[ext_resource type="Texture2D" uid="uid://d4lqo7iunvvch" path="res://assets/places/blacksmith/blacksmith_clicked.png" id="9_bopcj"]
+[ext_resource type="Texture2D" uid="uid://bh1i1jo5vkdtm" path="res://assets/places/blacksmith/blacksmith_hl.png" id="10_oqihw"]
+[ext_resource type="Texture2D" uid="uid://c436p3j2bicsv" path="res://assets/interior/store_small.png" id="13_xrhf7"]
+[ext_resource type="Texture2D" uid="uid://dee8kytit4ajd" path="res://assets/interior/blacksmith_interior_test.png" id="16_to7l2"]
+[ext_resource type="Texture2D" uid="uid://dtcf3x7q2l22k" path="res://assets/interior/shop_interior_test.png" id="17_m1tsi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lj1oe"]
+shader = ExtResource("1_35gy2")
+shader_parameter/v = 1.0
+shader_parameter/size = 2.52
+
+[node name="world" type="Node2D"]
+script = ExtResource("1_nr7jh")
+
+[node name="money_manager" type="Node" parent="."]
+
+[node name="TopDownVillage" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_lj1oe")
+position = Vector2(382, 382)
+texture = ExtResource("1_3kkdy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.172549, 0.25098, 0.247059, 0.541176)
+
+[node name="Map" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Map"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.040625
+anchor_top = 0.117361
+anchor_right = 0.959375
+anchor_bottom = 0.882639
+offset_left = -52.0
+offset_top = -84.5
+offset_right = 52.0
+offset_bottom = 84.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Map/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="guild_hall" type="Button" parent="CanvasLayer/Map/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 7
+text = "Hall Guild"
+
+[node name="blacksmith" type="Button" parent="CanvasLayer/Map/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 7
+text = "Blacksmith"
+
+[node name="shop" type="Button" parent="CanvasLayer/Map/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 7
+text = "Shop"
+
+[node name="status_side" type="Panel" parent="CanvasLayer/Map/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Map/HBoxContainer/status_side"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Map/HBoxContainer/status_side/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Map/HBoxContainer/status_side/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 11
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Map/HBoxContainer/status_side/VBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("3_msh78")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Map/HBoxContainer/status_side/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Map/HBoxContainer/status_side/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_t3vbu")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Map/HBoxContainer/status_side/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="CanvasLayer/Map/HBoxContainer/status_side/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Name: %s"
+
+[node name="Label" type="Label" parent="CanvasLayer/Map/HBoxContainer/status_side/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Money: %s"
+
+[node name="Control" type="Control" parent="CanvasLayer/Map/HBoxContainer/status_side/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="CanvasLayer/Map/HBoxContainer/status_side/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="guild_hall" type="TextureButton" parent="CanvasLayer/Map"]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 142.0
+offset_right = 508.0
+offset_bottom = 374.0
+texture_normal = ExtResource("3_m8ud6")
+texture_pressed = ExtResource("7_v3nwm")
+texture_hover = ExtResource("8_wjloe")
+
+[node name="shop" type="TextureButton" parent="CanvasLayer/Map"]
+layout_mode = 1
+offset_left = 123.0
+offset_top = 292.0
+offset_right = 215.0
+offset_bottom = 382.0
+texture_normal = ExtResource("4_x7ixc")
+texture_pressed = ExtResource("5_pvn8y")
+texture_hover = ExtResource("5_d4p15")
+
+[node name="blacksmith" type="TextureButton" parent="CanvasLayer/Map"]
+layout_mode = 1
+offset_left = 178.0
+offset_top = 156.0
+offset_right = 293.0
+offset_bottom = 259.0
+texture_normal = ExtResource("8_ajf8m")
+texture_pressed = ExtResource("9_bopcj")
+texture_hover = ExtResource("10_oqihw")
+
+[node name="interior" type="Control" parent="CanvasLayer" groups=["Interior"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/interior" groups=["Interior"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = -13
+
+[node name="interior_bg" type="ColorRect" parent="CanvasLayer/interior/HBoxContainer" groups=["Interior"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="shop_text" type="TextureRect" parent="CanvasLayer/interior/HBoxContainer/interior_bg" groups=["Interior"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -156.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("13_xrhf7")
+
+[node name="blacksmith_text" type="TextureRect" parent="CanvasLayer/interior/HBoxContainer/interior_bg" groups=["Interior"]]
+visible = false
+layout_mode = 0
+offset_right = 645.0
+offset_bottom = 564.0
+mouse_filter = 2
+texture = ExtResource("16_to7l2")
+expand_mode = 3
+
+[node name="guild_hall" type="TextureRect" parent="CanvasLayer/interior/HBoxContainer/interior_bg" groups=["Interior"]]
+visible = false
+layout_mode = 0
+offset_right = 646.0
+offset_bottom = 562.0
+texture = ExtResource("17_m1tsi")
+expand_mode = 3
+
+[node name="exit_establishment" type="Button" parent="CanvasLayer/interior/HBoxContainer/interior_bg" groups=["Interior"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -95.0
+offset_bottom = 31.0
+grow_horizontal = 0
+mouse_filter = 2
+text = "EXIT STORE"
+
+[node name="Control" type="Control" parent="CanvasLayer/interior/HBoxContainer" groups=["Interior"]]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[connection signal="button_up" from="CanvasLayer/Map/HBoxContainer/VBoxContainer/guild_hall" to="." method="_on_guild_hall_button_up"]
+[connection signal="button_up" from="CanvasLayer/Map/HBoxContainer/VBoxContainer/blacksmith" to="." method="_on_blacksmith_button_up"]
+[connection signal="button_up" from="CanvasLayer/Map/HBoxContainer/VBoxContainer/shop" to="." method="_on_shop_button_up"]
+[connection signal="button_up" from="CanvasLayer/Map/guild_hall" to="." method="_on_guild_hall_button_up"]
+[connection signal="button_up" from="CanvasLayer/Map/shop" to="." method="_on_shop_button_up"]
+[connection signal="button_up" from="CanvasLayer/Map/blacksmith" to="." method="_on_blacksmith_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior/HBoxContainer/interior_bg/exit_establishment" to="." method="_on_exit_establishment_button_up"]

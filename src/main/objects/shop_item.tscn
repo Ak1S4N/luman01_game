@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://c61mp6g8u6f77"]
+
+[ext_resource type="Script" path="res://src/main/scripts/objects/shop_item.gd" id="1_mk5nf"]
+[ext_resource type="Texture2D" uid="uid://flv3tdonsadi" path="res://assets/character_icons/reference_3.png" id="2_ctlx8"]
+[ext_resource type="Texture2D" uid="uid://domrsjgytsrqv" path="res://assets/ui_icons/exp_icon.webp" id="3_yltno"]
+
+[node name="shop_item" type="MarginContainer"]
+offset_right = 93.0
+offset_bottom = 147.0
+script = ExtResource("1_mk5nf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="item_title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "%s "
+
+[node name="item_display" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ctlx8")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_yltno")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="item_value" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
