@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmhi67cn87rre"]
 
 [ext_resource type="Script" path="res://src/main/scripts/objects/job_item.gd" id="1_ii6jw"]
-[ext_resource type="Texture2D" uid="uid://cnsbl2jwjedfk" path="res://assets/character_icons/reference_2.jpg" id="2_0nsju"]
+[ext_resource type="Texture2D" uid="uid://cnsbl2jwjedfk" path="res://assets/test_assets/character_icons/reference_2.jpg" id="2_0nsju"]
 
 [node name="job_item" type="MarginContainer"]
 self_modulate = Color(0, 0, 0, 1)

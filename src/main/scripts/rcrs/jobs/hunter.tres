@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://vcn84ovucj0y"]
 
-[ext_resource type="Texture2D" uid="uid://cu5hmbtveaoj8" path="res://assets/job_icon/hunting_icon.webp" id="1_bj51n"]
-[ext_resource type="Script" path="res://src/main/scripts/classes/job.gd" id="1_istx6"]
+[ext_resource type="Texture2D" uid="uid://cu5hmbtveaoj8" path="res://assets/test_assets/job_icon/hunting_icon.webp" id="1_bj51n"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_istx6"]
 
 [resource]
 script = ExtResource("1_istx6")

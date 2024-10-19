@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://c1pq45o2nagqv"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_fyndv"]
+[ext_resource type="Resource" uid="uid://cob3b16wbgt3e" path="res://new_src/resources/jobs/lumber_mill/sapling_collector.tres" id="1_jgo24"]
+
+[resource]
+script = ExtResource("1_fyndv")
+job_title = "Oak Feller"
+salary = 180
+level = 1
+psi_perle = 0.15
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.15
+job_required = ExtResource("1_jgo24")
+jr_level_required = 4
+item_required = 0

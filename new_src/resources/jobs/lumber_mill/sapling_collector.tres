@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://cob3b16wbgt3e"]
+
+[ext_resource type="Resource" uid="uid://c6dfef6ubyorr" path="res://new_src/resources/jobs/lumber_mill/kindler_collerctor.tres" id="1_5p7e6"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_ci7bb"]
+
+[resource]
+script = ExtResource("1_ci7bb")
+job_title = "Sapling Collector"
+salary = 90
+level = 1
+psi_perle = 0.1
+exp = 0.0
+max_exp = 120.0
+pmei_perle = 0.12
+job_required = ExtResource("1_5p7e6")
+jr_level_required = 3
+item_required = 0

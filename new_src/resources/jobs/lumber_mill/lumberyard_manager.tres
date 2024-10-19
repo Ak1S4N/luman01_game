@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://cx0xuv8l35h02"]
+
+[ext_resource type="Resource" uid="uid://c1pq45o2nagqv" path="res://new_src/resources/jobs/lumber_mill/oak_feller.tres" id="1_e7h5g"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_k8swk"]
+
+[resource]
+script = ExtResource("1_k8swk")
+job_title = "Lumberyard Manager"
+salary = 310
+level = 1
+psi_perle = 0.18
+exp = 0.0
+max_exp = 160.0
+pmei_perle = 0.2
+job_required = ExtResource("1_e7h5g")
+jr_level_required = 5
+item_required = 0

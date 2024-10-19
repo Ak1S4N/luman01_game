@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Job" load_steps=2 format=3 uid="uid://dg32dw5arphqr"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_u5qfo"]
+
+[resource]
+script = ExtResource("1_u5qfo")
+job_title = ""
+salary = 0
+level = 0
+psi_perle = 0.0
+exp = 0.0
+max_exp = 0.0
+pmei_perle = 0.0

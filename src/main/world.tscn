@@ -1,60 +1,69 @@
-[gd_scene load_steps=23 format=3 uid="uid://ceulkleidnvm1"]
+[gd_scene load_steps=19 format=3 uid="uid://cdmlhsd4kw56e"]
 
-[ext_resource type="Texture2D" uid="uid://c2gp1qbcfe2k8" path="res://assets/map/top_down_village.webp" id="1_3kkdy"]
-[ext_resource type="Script" path="res://src/main/scripts/managers/finance_manager.gd" id="1_6ml6w"]
-[ext_resource type="Script" path="res://src/main/scripts/managers/area_manager.gd" id="2_6c2er"]
-[ext_resource type="Resource" uid="uid://bub3oexuuwpos" path="res://src/main/scripts/rcrs/jobs/beggar.tres" id="2_fndi2"]
-[ext_resource type="Script" path="res://src/main/scripts/managers/character_manager.gd" id="2_jowsd"]
-[ext_resource type="Texture2D" uid="uid://chsytccqs5ojh" path="res://assets/places/guild_hall/guild_hall.PNG" id="3_m8ud6"]
-[ext_resource type="Texture2D" uid="uid://bhgfgafkabiel" path="res://assets/places/shop/shop.png" id="4_x7ixc"]
-[ext_resource type="Script" path="res://src/main/scripts/managers/UI_manager.gd" id="5_61dr5"]
-[ext_resource type="Texture2D" uid="uid://h4gy7k5n7li" path="res://assets/places/shop/shop_hl.png" id="5_d4p15"]
-[ext_resource type="Texture2D" uid="uid://tipvdr6q3b7f" path="res://assets/places/shop/shop_clicked.png" id="5_pvn8y"]
-[ext_resource type="Texture2D" uid="uid://bxbh6s0pgvo0v" path="res://assets/character_icons/reference_1.jpg" id="5_t3vbu"]
-[ext_resource type="Texture2D" uid="uid://devmtob30mipf" path="res://assets/places/guild_hall/guild_hall._selectedpng.png" id="7_v3nwm"]
-[ext_resource type="Script" path="res://src/main/scripts/scrollers/item_usage.gd" id="8_8co6t"]
-[ext_resource type="Texture2D" uid="uid://b57eq3bbvyq8a" path="res://assets/places/blacksmith/blacksmith.png" id="8_ajf8m"]
-[ext_resource type="Texture2D" uid="uid://q1bljctryqm" path="res://assets/places/guild_hall/guild_hall_hl.png" id="8_wjloe"]
-[ext_resource type="Texture2D" uid="uid://d4lqo7iunvvch" path="res://assets/places/blacksmith/blacksmith_clicked.png" id="9_bopcj"]
-[ext_resource type="Texture2D" uid="uid://bh1i1jo5vkdtm" path="res://assets/places/blacksmith/blacksmith_hl.png" id="10_oqihw"]
-[ext_resource type="Script" path="res://src/main/scripts/managers/interior_manager.gd" id="13_5oel0"]
-[ext_resource type="Script" path="res://src/main/scripts/scrollers/job_lists.gd" id="19_nktqv"]
-[ext_resource type="Script" path="res://src/main/scripts/classes/job.gd" id="20_2qome"]
-[ext_resource type="Resource" uid="uid://vcn84ovucj0y" path="res://src/main/scripts/rcrs/jobs/hunter.tres" id="21_xp42s"]
-[ext_resource type="Resource" uid="uid://cv8qpn7mxp84b" path="res://src/main/scripts/rcrs/jobs/prostitution.tres" id="22_bs8wa"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/finance_manager.gd" id="1_54g81"]
+[ext_resource type="Texture2D" uid="uid://dut84xddry02n" path="res://assets/main/maps/map1.png" id="1_fj72t"]
+[ext_resource type="Resource" uid="uid://bub3oexuuwpos" path="res://new_src/resources/jobs/refugee_quarters/beggar.tres" id="2_rxygm"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/character_manager.gd" id="3_sd1jx"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/item.gd" id="4_qoep8"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/UI_manager.gd" id="5_iweih"]
+[ext_resource type="Texture2D" uid="uid://bxbh6s0pgvo0v" path="res://assets/test_assets/character_icons/reference_1.jpg" id="6_tyqcv"]
+[ext_resource type="Script" path="res://src/main/scripts/scrollers/item_usage.gd" id="7_ufb6y"]
+[ext_resource type="Texture2D" uid="uid://dvmxlwodrg3aq" path="res://assets/main/buildings/lumber_mill/lumber_mill.png" id="8_2kcnh"]
+[ext_resource type="Texture2D" uid="uid://cjurqruqb6bqk" path="res://assets/main/buildings/lumber_mill/lumber_mill_clicked.png" id="9_8ihae"]
+[ext_resource type="Texture2D" uid="uid://bwf34o84u8y2d" path="res://assets/main/buildings/lumber_mill/lumber_mill_highlight.png" id="10_c5qb7"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/jobs_manager.gd" id="12_rkfho"]
+[ext_resource type="Texture2D" uid="uid://bnpbwy8820k3n" path="res://assets/main/buildings/blacksmith/blacksmith.png" id="13_krv2t"]
+[ext_resource type="Texture2D" uid="uid://bilo35ew7aomf" path="res://assets/main/buildings/blacksmith/blacksmith_clicked.png" id="14_74sos"]
+[ext_resource type="Texture2D" uid="uid://bvg3fjmirup72" path="res://assets/main/buildings/blacksmith/blacksmith_highlight.png" id="15_t142b"]
+[ext_resource type="Script" path="res://src/main/scripts/objects/interior.gd" id="16_sy24f"]
+
+[sub_resource type="Resource" id="Resource_5h7ch"]
+script = ExtResource("4_qoep8")
+item_name = ""
+value = 0.0
+item_type = 0
+
+[sub_resource type="Resource" id="Resource_uk8sx"]
+script = ExtResource("4_qoep8")
+item_name = ""
+value = 0.0
+item_type = 0
 
 [node name="world" type="Node2D"]
 
-[node name="finance_manager" type="Node" parent="."]
-script = ExtResource("1_6ml6w")
-current_job = ExtResource("2_fndi2")
+[node name="jobs_list_manager" type="Node" parent="."]
+script = ExtResource("12_rkfho")
+
+[node name="finance_manager" type="Node" parent="." node_paths=PackedStringArray("job_manager")]
+script = ExtResource("1_54g81")
+current_job = ExtResource("2_rxygm")
+job_manager = NodePath("../jobs_list_manager")
 
 [node name="character_manager" type="Node" parent="finance_manager"]
-script = ExtResource("2_jowsd")
+script = ExtResource("3_sd1jx")
+current_items = Array[ExtResource("4_qoep8")]([SubResource("Resource_5h7ch"), SubResource("Resource_uk8sx")])
 
 [node name="Timer" type="Timer" parent="finance_manager"]
 wait_time = 0.5
 autostart = true
 
-[node name="map" type="Sprite2D" parent="."]
-modulate = Color(0.540991, 0.54099, 0.54099, 1)
-position = Vector2(551, 347)
-texture = ExtResource("1_3kkdy")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(640, 360)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("1_fj72t")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="area_manager" type="Node" parent="CanvasLayer" node_paths=PackedStringArray("interior_manager")]
-script = ExtResource("2_6c2er")
-interior_manager = NodePath("../interior_manager")
-
-[node name="UI" type="Control" parent="CanvasLayer"]
+[node name="UI" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("finance_manager")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("5_61dr5")
+script = ExtResource("5_iweih")
+finance_manager = NodePath("../../finance_manager")
 
 [node name="cs_button" type="Button" parent="CanvasLayer/UI"]
 layout_mode = 1
@@ -67,6 +76,7 @@ grow_horizontal = 0
 text = "Character Status"
 
 [node name="status" type="Panel" parent="CanvasLayer/UI"]
+visible = false
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -95,7 +105,7 @@ offset_left = 3.0
 offset_top = 7.0
 offset_right = 133.0
 offset_bottom = 139.0
-texture = ExtResource("5_t3vbu")
+texture = ExtResource("6_tyqcv")
 expand_mode = 1
 
 [node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/character_bar"]
@@ -200,7 +210,7 @@ text = "%s"
 [node name="item_usage_bar" type="Panel" parent="CanvasLayer/UI/status/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-script = ExtResource("8_8co6t")
+script = ExtResource("7_ufb6y")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/UI/status/VBoxContainer/item_usage_bar"]
 layout_mode = 1
@@ -226,7 +236,41 @@ text = "current items:"
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="map_buttons" type="Control" parent="CanvasLayer"]
+[node name="map_buttos" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="lumber_mill" type="TextureButton" parent="CanvasLayer/map_buttos"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 194.0
+offset_top = 221.0
+offset_right = 271.0
+offset_bottom = 261.0
+scale = Vector2(2.4, 2.4)
+texture_normal = ExtResource("8_2kcnh")
+texture_pressed = ExtResource("9_8ihae")
+texture_hover = ExtResource("10_c5qb7")
+
+[node name="blacksmith" type="TextureButton" parent="CanvasLayer/map_buttos"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 400.0
+offset_top = 248.0
+offset_right = 490.0
+offset_bottom = 303.0
+scale = Vector2(2.4, 2.4)
+texture_normal = ExtResource("13_krv2t")
+texture_pressed = ExtResource("14_74sos")
+texture_hover = ExtResource("15_t142b")
+
+[node name="interior_manager" type="Node" parent="CanvasLayer"]
+
+[node name="map1_inma" type="Control" parent="CanvasLayer/interior_manager"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -235,50 +279,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="blacksmith" type="TextureButton" parent="CanvasLayer/map_buttons"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.271875
-anchor_top = 0.165278
-anchor_right = 0.330469
-anchor_bottom = 0.252778
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("8_ajf8m")
-texture_pressed = ExtResource("9_bopcj")
-texture_hover = ExtResource("10_oqihw")
-metadata/_edit_use_anchors_ = true
-
-[node name="guild_hall" type="TextureButton" parent="CanvasLayer/map_buttons"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.36875
-anchor_top = 0.151389
-anchor_right = 0.497656
-anchor_bottom = 0.418056
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("3_m8ud6")
-texture_pressed = ExtResource("7_v3nwm")
-texture_hover = ExtResource("8_wjloe")
-metadata/_edit_use_anchors_ = true
-
-[node name="shop" type="TextureButton" parent="CanvasLayer/map_buttons"]
-layout_mode = 0
-offset_left = 295.0
-offset_top = 260.0
-offset_right = 387.0
-offset_bottom = 350.0
-texture_normal = ExtResource("4_x7ixc")
-texture_pressed = ExtResource("5_pvn8y")
-texture_hover = ExtResource("5_d4p15")
-
-[node name="interior_manager" type="Node" parent="CanvasLayer"]
-script = ExtResource("13_5oel0")
-
-[node name="guild_hall" type="Control" parent="CanvasLayer/interior_manager" groups=["interior"]]
+[node name="lumber_mill" type="Control" parent="CanvasLayer/interior_manager/map1_inma" groups=["interior"]]
 visible = false
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -288,8 +291,9 @@ offset_right = -443.0
 offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("16_sy24f")
 
-[node name="Panel" type="Panel" parent="CanvasLayer/interior_manager/guild_hall"]
+[node name="Panel" type="Panel" parent="CanvasLayer/interior_manager/map1_inma/lumber_mill"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -297,7 +301,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/guild_hall/Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/map1_inma/lumber_mill/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -305,20 +309,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="icon" type="Panel" parent="CanvasLayer/interior_manager/guild_hall/Panel/VBoxContainer"]
+[node name="icon" type="Panel" parent="CanvasLayer/interior_manager/map1_inma/lumber_mill/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.9
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/interior_manager/guild_hall/Panel/VBoxContainer/icon"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/interior_manager/map1_inma/lumber_mill/Panel/VBoxContainer/icon"]
 layout_mode = 2
 offset_right = 794.0
 offset_bottom = 202.0
-texture = ExtResource("5_t3vbu")
+texture = ExtResource("6_tyqcv")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="CanvasLayer/interior_manager/guild_hall/Panel/VBoxContainer/icon"]
+[node name="Label" type="Label" parent="CanvasLayer/interior_manager/map1_inma/lumber_mill/Panel/VBoxContainer/icon"]
 layout_mode = 2
 offset_left = 263.0
 offset_top = 17.0
@@ -326,14 +330,12 @@ offset_right = 413.0
 offset_bottom = 40.0
 text = "Guild Receptionist"
 
-[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/guild_hall/Panel/VBoxContainer"]
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/map1_inma/lumber_mill/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
-script = ExtResource("19_nktqv")
-job_list = Array[ExtResource("20_2qome")]([ExtResource("2_fndi2"), ExtResource("21_xp42s"), ExtResource("22_bs8wa")])
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/interior_manager/guild_hall/Panel/VBoxContainer/job_list"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/interior_manager/map1_inma/lumber_mill/Panel/VBoxContainer/job_list"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -341,17 +343,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/guild_hall/Panel/VBoxContainer/job_list/HBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/map1_inma/lumber_mill/Panel/VBoxContainer/job_list/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/guild_hall/Panel/VBoxContainer/job_list/HBoxContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/map1_inma/lumber_mill/Panel/VBoxContainer/job_list/HBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 12
 
-[node name="exit_button" type="Button" parent="CanvasLayer/interior_manager/guild_hall/Panel"]
+[node name="exit_button" type="Button" parent="CanvasLayer/interior_manager/map1_inma/lumber_mill/Panel"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -361,94 +363,12 @@ offset_bottom = 31.0
 grow_horizontal = 0
 text = "exit"
 
-[node name="shop" type="Control" parent="CanvasLayer/interior_manager" groups=["interior"]]
-visible = false
+[node name="map2_inma" type="Control" parent="CanvasLayer/interior_manager"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 43.0
-offset_top = 19.0
-offset_right = -443.0
-offset_bottom = -20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Panel" type="Panel" parent="CanvasLayer/interior_manager/shop"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/shop/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="icon" type="Panel" parent="CanvasLayer/interior_manager/shop/Panel/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.9
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/interior_manager/shop/Panel/VBoxContainer/icon"]
-layout_mode = 2
-offset_right = 794.0
-offset_bottom = 202.0
-texture = ExtResource("5_t3vbu")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="Label" type="Label" parent="CanvasLayer/interior_manager/shop/Panel/VBoxContainer/icon"]
-layout_mode = 2
-offset_left = 263.0
-offset_top = 17.0
-offset_right = 413.0
-offset_bottom = 40.0
-text = "Guild Receptionist"
-
-[node name="item_list" type="Panel" parent="CanvasLayer/interior_manager/shop/Panel/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/interior_manager/shop/Panel/VBoxContainer/item_list"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/shop/Panel/VBoxContainer/item_list/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/shop/Panel/VBoxContainer/item_list/HBoxContainer/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 12
-
-[node name="exit_button" type="Button" parent="CanvasLayer/interior_manager/shop/Panel"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -37.0
-offset_bottom = 31.0
-grow_horizontal = 0
-text = "exit"
+anchors_preset = 0
+mouse_filter = 2
 
 [connection signal="timeout" from="finance_manager/Timer" to="finance_manager" method="_on_timer_timeout"]
 [connection signal="timeout" from="finance_manager/Timer" to="finance_manager/character_manager" method="_on_timer_timeout"]
-[connection signal="button_up" from="CanvasLayer/UI/cs_button" to="CanvasLayer/area_manager" method="_on_cs_button_button_up"]
-[connection signal="button_up" from="CanvasLayer/UI/status/VBoxContainer/character_bar/VBoxContainer/filler/status_exit" to="CanvasLayer/area_manager" method="_on_status_exit_button_up"]
-[connection signal="button_up" from="CanvasLayer/map_buttons/guild_hall" to="CanvasLayer/area_manager" method="_on_guild_hall_button_up"]
-[connection signal="button_up" from="CanvasLayer/map_buttons/shop" to="CanvasLayer/area_manager" method="_on_shop_button_up"]
-[connection signal="button_up" from="CanvasLayer/interior_manager/guild_hall/Panel/exit_button" to="CanvasLayer/interior_manager" method="_on_exit_button_button_up"]
-[connection signal="button_up" from="CanvasLayer/interior_manager/shop/Panel/exit_button" to="CanvasLayer/interior_manager" method="_on_exit_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/UI/cs_button" to="CanvasLayer/UI" method="_on_cs_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/UI/status/VBoxContainer/character_bar/VBoxContainer/filler/status_exit" to="CanvasLayer/UI" method="_on_status_exit_button_up"]

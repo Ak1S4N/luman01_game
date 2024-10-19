@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c61mp6g8u6f77"]
 
 [ext_resource type="Script" path="res://src/main/scripts/objects/shop_item.gd" id="1_mk5nf"]
-[ext_resource type="Texture2D" uid="uid://flv3tdonsadi" path="res://assets/character_icons/reference_3.png" id="2_ctlx8"]
-[ext_resource type="Texture2D" uid="uid://domrsjgytsrqv" path="res://assets/ui_icons/exp_icon.webp" id="3_yltno"]
+[ext_resource type="Texture2D" uid="uid://flv3tdonsadi" path="res://assets/test_assets/character_icons/reference_3.png" id="2_ctlx8"]
+[ext_resource type="Texture2D" uid="uid://domrsjgytsrqv" path="res://assets/test_assets/ui_icons/exp_icon.webp" id="3_yltno"]
 
 [node name="shop_item" type="MarginContainer"]
 offset_right = 93.0

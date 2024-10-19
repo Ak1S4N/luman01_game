@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://c6dfef6ubyorr"]
+
+[ext_resource type="Resource" uid="uid://bub3oexuuwpos" path="res://new_src/resources/jobs/refugee_quarters/beggar.tres" id="1_ea80b"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_vocyc"]
+
+[resource]
+script = ExtResource("1_vocyc")
+job_title = "Kindler Collector"
+salary = 45
+level = 1
+psi_perle = 0.15
+exp = 0.0
+max_exp = 150.0
+pmei_perle = 0.15
+job_required = ExtResource("1_ea80b")
+jr_level_required = 2
+item_required = 0
