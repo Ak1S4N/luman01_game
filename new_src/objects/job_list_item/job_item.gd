@@ -16,7 +16,8 @@ func _ready() -> void:
 	display_bar.max_value = job.max_exp
 	display_bar.value = job.exp
 	display_level.text = "Level: " + str(job.level)
-	display_req.text = str(job.job_required.job_title) + " Level: " + str(job.jr_level_required)
+	if job.job_required:
+		display_req.text = str(job.job_required.job_title) + " Level: " + str(job.jr_level_required)
 	
 
 
@@ -24,6 +25,8 @@ func _on_apply_button_up() -> void:
 	if job.job_required:
 		if job.job_required.level == job.jr_level_required:
 			emit_signal("get_job", job)
+	else:
+		emit_signal("get_job", job)
 
 
 func _on_timer_timeout() -> void:

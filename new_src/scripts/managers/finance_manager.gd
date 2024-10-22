@@ -8,6 +8,7 @@ var wallet: int = 0
 @onready var character_manager: Node = $character_manager
 @export var job_manager: Managers
 
+
 func _ready() -> void:
 	if job_manager:
 		job_manager.get_job.connect(job_transfer)

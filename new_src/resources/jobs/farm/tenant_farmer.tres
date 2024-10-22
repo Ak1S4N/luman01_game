@@ -5,9 +5,11 @@
 [resource]
 script = ExtResource("1_oqfyp")
 job_title = ""
-salary = 0
-level = 0
-psi_perle = 0.0
-exp = 0.0
-max_exp = 0.0
-pmei_perle = 0.0
+salary = 1
+level = 1
+psi_perle = 1.0
+exp = 1.0
+max_exp = 1.0
+pmei_perle = 1.0
+jr_level_required = 1
+item_required = 0
