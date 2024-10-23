@@ -13,3 +13,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	AudioServer.set_bus_volume_db(1, music_volume)
 	AudioServer.set_bus_volume_db(2, sfx_volume)
+	

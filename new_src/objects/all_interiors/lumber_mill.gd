@@ -10,7 +10,6 @@ func _ready() -> void:
 		job_list = job_manager.give_list(self.name)
 	
 	if job_list:
-		print(job_list)
 		for job in job_list:
 			var job_item_instance = CONTAINER.instantiate()
 			job_item_instance.job = job

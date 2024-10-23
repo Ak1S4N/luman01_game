@@ -16,6 +16,10 @@ signal get_job(job)
 @export var refugee_quarters: Array[Job]
 @export var slave_quarters: Array[Job]
 
+func _ready() -> void:
+	if SaveLoad.is_new_game == false:
+		load_data()
+
 func give_list(int_name: String):
 	match int_name:
 		'barracks':
@@ -47,3 +51,210 @@ func give_list(int_name: String):
 
 func job_transfer(job_rsc: Job) -> void:
 	emit_signal("get_job", job_rsc)
+
+
+func save() -> void:
+	for job in refugee_quarters:
+		var job_name = job.job_title
+		var job_data = {
+			"job_salary":job.salary,
+			"job_level": job.level,
+			"job_exp": job.exp,
+			"job_max_exp": job.max_exp
+		}
+		SaveLoad.save(job_data, job_name)
+	
+	for job in barracks:
+		var job_name = job.job_title
+		var job_data = {
+			"job_salary":job.salary,
+			"job_level": job.level,
+			"job_exp": job.exp,
+			"job_max_exp": job.max_exp
+		}
+		SaveLoad.save(job_data, job_name)
+	
+	for job in blacksmith:
+		var job_name = job.job_title
+		var job_data = {
+			"job_salary":job.salary,
+			"job_level": job.level,
+			"job_exp": job.exp,
+			"job_max_exp": job.max_exp
+		}
+		SaveLoad.save(job_data, job_name)
+
+	for job in farm:
+		var job_name = job.job_title
+		var job_data = {
+			"job_salary":job.salary,
+			"job_level": job.level,
+			"job_exp": job.exp,
+			"job_max_exp": job.max_exp
+		}
+		SaveLoad.save(job_data, job_name)
+
+	for job in fishing_hut:
+		var job_name = job.job_title
+		var job_data = {
+			"job_salary":job.salary,
+			"job_level": job.level,
+			"job_exp": job.exp,
+			"job_max_exp": job.max_exp
+		}
+		SaveLoad.save(job_data, job_name)
+
+	for job in guild_hall:
+		var job_name = job.job_title
+		var job_data = {
+			"job_salary":job.salary,
+			"job_level": job.level,
+			"job_exp": job.exp,
+			"job_max_exp": job.max_exp
+		}
+		SaveLoad.save(job_data, job_name)
+
+	for job in hunting_lodge:
+		var job_name = job.job_title
+		var job_data = {
+			"job_salary":job.salary,
+			"job_level": job.level,
+			"job_exp": job.exp,
+			"job_max_exp": job.max_exp
+		}
+		SaveLoad.save(job_data, job_name)
+
+	for job in lumber_mill:
+		var job_name = job.job_title
+		var job_data = {
+			"job_salary":job.salary,
+			"job_level": job.level,
+			"job_exp": job.exp,
+			"job_max_exp": job.max_exp
+		}
+		SaveLoad.save(job_data, job_name)
+
+	for job in market:
+		var job_name = job.job_title
+		var job_data = {
+			"job_salary":job.salary,
+			"job_level": job.level,
+			"job_exp": job.exp,
+			"job_max_exp": job.max_exp
+		}
+		SaveLoad.save(job_data, job_name)
+
+	for job in masonry:
+		var job_name = job.job_title
+		var job_data = {
+			"job_salary":job.salary,
+			"job_level": job.level,
+			"job_exp": job.exp,
+			"job_max_exp": job.max_exp
+		}
+		SaveLoad.save(job_data, job_name)
+
+	for job in monastery:
+		var job_name = job.job_title
+		var job_data = {
+			"job_salary":job.salary,
+			"job_level": job.level,
+			"job_exp": job.exp,
+			"job_max_exp": job.max_exp
+		}
+		SaveLoad.save(job_data, job_name)
+
+	for job in slave_quarters:
+		var job_name = job.job_title
+		var job_data = {
+			"job_salary":job.salary,
+			"job_level": job.level,
+			"job_exp": job.exp,
+			"job_max_exp": job.max_exp
+		}
+		SaveLoad.save(job_data, job_name)
+
+func load_data() -> void:
+	for job in refugee_quarters:
+		var job_data: Dictionary = SaveLoad.load_data(job.job_title, ["job_salary", "job_level", "job_exp", "job_max_exp"])
+		job.salary = job_data.get("job_salary")
+		job.level = job_data.get("job_level")
+		job.exp = job_data.get("job_exp")
+		job.max_exp = job_data.get("job_max_exp")
+
+	for job in barracks:
+		var job_data: Dictionary = SaveLoad.load_data(job.job_title, ["job_salary", "job_level", "job_exp", "job_max_exp"])
+		job.salary = job_data.get("job_salary")
+		job.level = job_data.get("job_level")
+		job.exp = job_data.get("job_exp")
+		job.max_exp = job_data.get("job_max_exp")
+
+	for job in blacksmith:
+		var job_data: Dictionary = SaveLoad.load_data(job.job_title, ["job_salary", "job_level", "job_exp", "job_max_exp"])
+		job.salary = job_data.get("job_salary")
+		job.level = job_data.get("job_level")
+		job.exp = job_data.get("job_exp")
+		job.max_exp = job_data.get("job_max_exp")
+
+	for job in farm:
+		var job_data: Dictionary = SaveLoad.load_data(job.job_title, ["job_salary", "job_level", "job_exp", "job_max_exp"])
+		job.salary = job_data.get("job_salary")
+		job.level = job_data.get("job_level")
+		job.exp = job_data.get("job_exp")
+		job.max_exp = job_data.get("job_max_exp")
+
+	for job in fishing_hut:
+		var job_data: Dictionary = SaveLoad.load_data(job.job_title, ["job_salary", "job_level", "job_exp", "job_max_exp"])
+		job.salary = job_data.get("job_salary")
+		job.level = job_data.get("job_level")
+		job.exp = job_data.get("job_exp")
+		job.max_exp = job_data.get("job_max_exp")
+
+	for job in guild_hall:
+		var job_data: Dictionary = SaveLoad.load_data(job.job_title, ["job_salary", "job_level", "job_exp", "job_max_exp"])
+		job.salary = job_data.get("job_salary")
+		job.level = job_data.get("job_level")
+		job.exp = job_data.get("job_exp")
+		job.max_exp = job_data.get("job_max_exp")
+
+	for job in hunting_lodge:
+		var job_data: Dictionary = SaveLoad.load_data(job.job_title, ["job_salary", "job_level", "job_exp", "job_max_exp"])
+		job.salary = job_data.get("job_salary")
+		job.level = job_data.get("job_level")
+		job.exp = job_data.get("job_exp")
+		job.max_exp = job_data.get("job_max_exp")
+
+	for job in lumber_mill:
+		var job_data: Dictionary = SaveLoad.load_data(job.job_title, ["job_salary", "job_level", "job_exp", "job_max_exp"])
+		job.salary = job_data.get("job_salary")
+		job.level = job_data.get("job_level")
+		job.exp = job_data.get("job_exp")
+		job.max_exp = job_data.get("job_max_exp")
+
+	for job in market:
+		var job_data: Dictionary = SaveLoad.load_data(job.job_title, ["job_salary", "job_level", "job_exp", "job_max_exp"])
+		job.salary = job_data.get("job_salary")
+		job.level = job_data.get("job_level")
+		job.exp = job_data.get("job_exp")
+		job.max_exp = job_data.get("job_max_exp")
+
+	for job in masonry:
+		var job_data: Dictionary = SaveLoad.load_data(job.job_title, ["job_salary", "job_level", "job_exp", "job_max_exp"])
+		job.salary = job_data.get("job_salary")
+		job.level = job_data.get("job_level")
+		job.exp = job_data.get("job_exp")
+		job.max_exp = job_data.get("job_max_exp")
+
+	for job in monastery:
+		var job_data: Dictionary = SaveLoad.load_data(job.job_title, ["job_salary", "job_level", "job_exp", "job_max_exp"])
+		job.salary = job_data.get("job_salary")
+		job.level = job_data.get("job_level")
+		job.exp = job_data.get("job_exp")
+		job.max_exp = job_data.get("job_max_exp")
+
+	for job in slave_quarters:
+		var job_data: Dictionary = SaveLoad.load_data(job.job_title, ["job_salary", "job_level", "job_exp", "job_max_exp"])
+		job.salary = job_data.get("job_salary")
+		job.level = job_data.get("job_level")
+		job.exp = job_data.get("job_exp")
+		job.max_exp = job_data.get("job_max_exp")

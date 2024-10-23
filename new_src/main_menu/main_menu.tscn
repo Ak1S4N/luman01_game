@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbqo5xmunr5w4"]
+[gd_scene load_steps=3 format=3 uid="uid://dbqo5xmunr5w4"]
 
+[ext_resource type="Script" path="res://new_src/main_menu/main_menu.gd" id="1_501wg"]
 [ext_resource type="Texture2D" uid="uid://ceuc0auu18vvm" path="res://assets/main/main_menu/main_menu_bg.png" id="1_kdbxd"]
 
 [node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_501wg")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1

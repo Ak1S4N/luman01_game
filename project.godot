@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameSettings="*res://new_src/scripts/singletong/game_settings.gd"
+SaveLoad="*res://new_src/scripts/singletong/save_load.gd"
 
 [display]
 
