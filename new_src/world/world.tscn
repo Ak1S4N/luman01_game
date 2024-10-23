@@ -916,7 +916,7 @@ offset_bottom = 40.0
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/text_notif/ScrollContainer"]
 layout_mode = 2
 
-[node name="main_menu" type="Control" parent="CanvasLayer"]
+[node name="paused_menu" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -924,7 +924,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="background" type="Panel" parent="CanvasLayer/main_menu"]
+[node name="background" type="Panel" parent="CanvasLayer/paused_menu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -932,7 +932,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="button_screen" type="CenterContainer" parent="CanvasLayer/main_menu"]
+[node name="button_screen" type="CenterContainer" parent="CanvasLayer/paused_menu"]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -947,22 +947,22 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/main_menu/button_screen"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/paused_menu/button_screen"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="CanvasLayer/main_menu/button_screen/VBoxContainer"]
+[node name="Button" type="Button" parent="CanvasLayer/paused_menu/button_screen/VBoxContainer"]
 layout_mode = 2
 text = "RESUME"
 
-[node name="Button3" type="Button" parent="CanvasLayer/main_menu/button_screen/VBoxContainer"]
+[node name="Button3" type="Button" parent="CanvasLayer/paused_menu/button_screen/VBoxContainer"]
 layout_mode = 2
 text = "SETTINGS"
 
-[node name="Button2" type="Button" parent="CanvasLayer/main_menu/button_screen/VBoxContainer"]
+[node name="Button2" type="Button" parent="CanvasLayer/paused_menu/button_screen/VBoxContainer"]
 layout_mode = 2
 text = "SAVE & QUIT"
 
-[node name="settings" type="Panel" parent="CanvasLayer/main_menu"]
+[node name="settings" type="Panel" parent="CanvasLayer/paused_menu"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -976,7 +976,7 @@ offset_bottom = 301.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/main_menu/settings"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/paused_menu/settings"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -989,61 +989,61 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 7
 
-[node name="Label" type="Label" parent="CanvasLayer/main_menu/settings/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/paused_menu/settings/VBoxContainer"]
 layout_mode = 2
 text = "SETTINGS"
 horizontal_alignment = 1
 
-[node name="Control" type="Control" parent="CanvasLayer/main_menu/settings/VBoxContainer"]
+[node name="Control" type="Control" parent="CanvasLayer/paused_menu/settings/VBoxContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/main_menu/settings/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/paused_menu/settings/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/main_menu/settings/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/paused_menu/settings/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Music Audio"
 horizontal_alignment = 1
 
-[node name="HScrollBar" type="HScrollBar" parent="CanvasLayer/main_menu/settings/VBoxContainer/HBoxContainer"]
+[node name="HScrollBar" type="HScrollBar" parent="CanvasLayer/paused_menu/settings/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.5
 min_value = -72.0
 max_value = 6.0
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/main_menu/settings/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/paused_menu/settings/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/main_menu/settings/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="CanvasLayer/paused_menu/settings/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Sound Audio"
 horizontal_alignment = 1
 
-[node name="HScrollBar" type="HScrollBar" parent="CanvasLayer/main_menu/settings/VBoxContainer/HBoxContainer2"]
+[node name="HScrollBar" type="HScrollBar" parent="CanvasLayer/paused_menu/settings/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.5
 min_value = -72.0
 max_value = 6.0
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/main_menu/settings/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/paused_menu/settings/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/main_menu/settings/VBoxContainer/HBoxContainer3"]
+[node name="Label" type="Label" parent="CanvasLayer/paused_menu/settings/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Fullscreen"
 horizontal_alignment = 1
 
-[node name="HScrollBar" type="CheckButton" parent="CanvasLayer/main_menu/settings/VBoxContainer/HBoxContainer3"]
+[node name="HScrollBar" type="CheckButton" parent="CanvasLayer/paused_menu/settings/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.5
 
-[node name="Button" type="Button" parent="CanvasLayer/main_menu/settings"]
+[node name="Button" type="Button" parent="CanvasLayer/paused_menu/settings"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
