@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Event" load_steps=3 format=3 uid="uid://dvcbmbn2nrsj8"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_6wvdx"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/event.gd" id="2_1yvd7"]
+
+[resource]
+script = ExtResource("2_1yvd7")
+event_title = "A New Child"
+event_description = "You and your newly wed partner just had bring birth of your child. You and your spouse overjoys with the news...
+
+But you still have work to do...
+
+You've been struck with a decision..."
+has_occured = false
+type = 1
+option = 0
+job_options = Array[ExtResource("1_6wvdx")]([])
+value_options = Array[int]([-40, -20])
+value_name = Array[String](["Be a full-time father for the baby", "Leave your wife in the weekdays for work"])

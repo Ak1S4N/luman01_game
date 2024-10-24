@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://dxmbnomyn2365"]
+[gd_scene load_steps=68 format=3 uid="uid://dxmbnomyn2365"]
 
 [ext_resource type="Texture2D" uid="uid://dht1dcbnqtsxd" path="res://assets/main/maps/map2.png" id="1_8rker"]
 [ext_resource type="Script" path="res://new_src/world/world.gd" id="1_vqio8"]
@@ -63,6 +63,10 @@
 [ext_resource type="Script" path="res://new_src/world/paused_menu.gd" id="61_aif7j"]
 [ext_resource type="Script" path="res://new_src/scripts/managers/event_manager.gd" id="61_vnwhq"]
 [ext_resource type="Resource" uid="uid://207jv80y07uc" path="res://new_src/resources/events/test_event.tres" id="62_wffkc"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/event.gd" id="63_mpann"]
+[ext_resource type="Resource" uid="uid://b5kik6x0sjoa" path="res://new_src/resources/events/higher_exp.tres" id="64_bnu8n"]
+[ext_resource type="Resource" uid="uid://cedtcvlwf17k2" path="res://new_src/resources/events/random_job.tres" id="65_ueop6"]
+[ext_resource type="Resource" uid="uid://dvcbmbn2nrsj8" path="res://new_src/resources/events/low_exp.tres" id="66_subff"]
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_vqio8")
@@ -911,6 +915,8 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("61_vnwhq")
 first_event = ExtResource("62_wffkc")
+random_general_event = Array[ExtResource("63_mpann")]([ExtResource("64_bnu8n"), ExtResource("65_ueop6"), ExtResource("66_subff")])
+chance = 0.03
 finance_manager = NodePath("../../finance_manager")
 
 [node name="Timer" type="Timer" parent="CanvasLayer/event_manager"]
@@ -935,7 +941,7 @@ offset_bottom = 40.0
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/text_notif/ScrollContainer"]
 layout_mode = 2
 
-[node name="paused_menu" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("job_manager", "finance_manager")]
+[node name="paused_menu" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("job_manager", "finance_manager", "event_manager")]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -946,6 +952,7 @@ grow_vertical = 2
 script = ExtResource("61_aif7j")
 job_manager = NodePath("../job_manager")
 finance_manager = NodePath("../../finance_manager")
+event_manager = NodePath("../event_manager")
 
 [node name="background" type="Panel" parent="CanvasLayer/paused_menu"]
 layout_mode = 1

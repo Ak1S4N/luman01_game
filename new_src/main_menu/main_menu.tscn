@@ -67,3 +67,5 @@ layout_mode = 2
 text = "QUIT GAME"
 
 [connection signal="button_up" from="VBoxContainer/new_game" to="." method="new_game"]
+[connection signal="button_up" from="VBoxContainer/continue_game" to="." method="continue_game"]
+[connection signal="button_up" from="VBoxContainer/quit" to="." method="quit"]

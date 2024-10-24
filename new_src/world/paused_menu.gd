@@ -5,6 +5,7 @@ extends Control
 
 @export var job_manager: Managers
 @export var finance_manager: Managers
+@export var event_manager: Managers
 
 @onready var music_scbar: HScrollBar = $settings/VBoxContainer/HBoxContainer/music_scbar
 @onready var sound_scbar: HScrollBar = $settings/VBoxContainer/HBoxContainer2/sound_scbar
@@ -30,6 +31,7 @@ func close_settings() -> void:
 func save_quit() -> void:
 	job_manager.save()
 	finance_manager.save()
+	event_manager.save_events()
 	get_tree().change_scene_to_file("res://new_src/main_menu/main_menu.tscn")
 
 func _process(delta: float) -> void:

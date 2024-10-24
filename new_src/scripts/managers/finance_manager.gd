@@ -35,6 +35,9 @@ func _on_timer_timeout() -> void:
 func job_transfer(job_rsc: Job) -> void:
 	current_job = job_rsc
 
+func add_exp(value: int) -> void:
+	current_job.exp += value
+
 
 func save() -> void:
 	var character_name = "player"

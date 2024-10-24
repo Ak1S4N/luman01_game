@@ -4,10 +4,12 @@
 
 [resource]
 script = ExtResource("1_7vo4e")
-job_title = ""
-salary = 0
+job_title = "Trapper"
+salary = 100
 level = 0
 psi_perle = 0.0
 exp = 0.0
 max_exp = 0.0
 pmei_perle = 0.0
+jr_level_required = 0
+item_required = 0
