@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Event" load_steps=5 format=3 uid="uid://207jv80y07uc"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/event.gd" id="1_6hai6"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_c5uyq"]
+[ext_resource type="Resource" uid="uid://bub3oexuuwpos" path="res://new_src/resources/jobs/refugee_quarters/beggar.tres" id="2_dphp4"]
+[ext_resource type="Resource" uid="uid://biplfjbbnmgst" path="res://new_src/resources/jobs/slave_quarters/fresh.tres" id="3_220ry"]
+
+[resource]
+script = ExtResource("1_6hai6")
+event_title = "You've been born"
+event_description = "You have now been born into this world... While your eyes are still closed, a god whispered to you and gave you an option to choose your start."
+has_occured = false
+type = 0
+option = 0
+job_options = Array[ExtResource("1_c5uyq")]([ExtResource("2_dphp4"), ExtResource("3_220ry")])
+value_options = Array[int]([])
+value_name = Array[String]([])

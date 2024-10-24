@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://dxmbnomyn2365"]
+[gd_scene load_steps=64 format=3 uid="uid://dxmbnomyn2365"]
 
 [ext_resource type="Texture2D" uid="uid://dht1dcbnqtsxd" path="res://assets/main/maps/map2.png" id="1_8rker"]
 [ext_resource type="Script" path="res://new_src/world/world.gd" id="1_vqio8"]
@@ -61,6 +61,8 @@
 [ext_resource type="Resource" uid="uid://da6gmo1xmdbkd" path="res://new_src/resources/jobs/slave_quarters/lowly.tres" id="49_2kcva"]
 [ext_resource type="Resource" uid="uid://boc1qd8dynrxl" path="res://new_src/resources/jobs/slave_quarters/valued.tres" id="50_oca5b"]
 [ext_resource type="Script" path="res://new_src/world/paused_menu.gd" id="61_aif7j"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/event_manager.gd" id="61_vnwhq"]
+[ext_resource type="Resource" uid="uid://207jv80y07uc" path="res://new_src/resources/events/test_event.tres" id="62_wffkc"]
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_vqio8")
@@ -899,6 +901,22 @@ lumber_mill = Array[ExtResource("23_2gtsp")]([ExtResource("42_4roej"), ExtResour
 refugee_quarters = Array[ExtResource("23_2gtsp")]([ExtResource("2_stgm5"), ExtResource("46_b6nln"), ExtResource("47_u50n8")])
 slave_quarters = Array[ExtResource("23_2gtsp")]([ExtResource("48_amx4i"), ExtResource("49_2kcva"), ExtResource("50_oca5b")])
 
+[node name="event_manager" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("finance_manager")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("61_vnwhq")
+first_event = ExtResource("62_wffkc")
+finance_manager = NodePath("../../finance_manager")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/event_manager"]
+wait_time = 0.5
+autostart = true
+
 [node name="text_notif" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 2
@@ -1080,6 +1098,7 @@ text = "Exit Setttings"
 [connection signal="button_up" from="CanvasLayer/interior_manager/hunting_lodge/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
 [connection signal="button_up" from="CanvasLayer/interior_manager/slave_quarters/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
 [connection signal="button_up" from="CanvasLayer/interior_manager/refugee_quarters/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="timeout" from="CanvasLayer/event_manager/Timer" to="CanvasLayer/event_manager" method="_on_timer_timeout"]
 [connection signal="button_up" from="CanvasLayer/paused_menu/button_screen/VBoxContainer/resume" to="CanvasLayer/paused_menu" method="resume"]
 [connection signal="button_up" from="CanvasLayer/paused_menu/button_screen/VBoxContainer/settings" to="CanvasLayer/paused_menu" method="open_settings"]
 [connection signal="button_up" from="CanvasLayer/paused_menu/button_screen/VBoxContainer/save_quit" to="CanvasLayer/paused_menu" method="save_quit"]

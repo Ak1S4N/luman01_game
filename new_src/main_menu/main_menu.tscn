@@ -65,3 +65,5 @@ text = "SETTINGS"
 [node name="quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "QUIT GAME"
+
+[connection signal="button_up" from="VBoxContainer/new_game" to="." method="new_game"]

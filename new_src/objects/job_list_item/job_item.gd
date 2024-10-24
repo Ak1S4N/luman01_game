@@ -30,7 +30,7 @@ func _on_apply_button_up() -> void:
 
 
 func _on_timer_timeout() -> void:
-	if not GameSettings.paused:
+	if not GameSettings.paused and not GameSettings.on_event:
 		display_salary.text = "Salary: " + str(job.salary)
 		display_bar.max_value = job.max_exp
 		display_bar.value = job.exp

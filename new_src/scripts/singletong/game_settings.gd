@@ -1,6 +1,7 @@
 extends Node
 
 var paused: bool = false
+var on_event: bool = false
 
 const BUS_LAYOUT = preload("res://default_bus_layout.tres")
 var music_volume: float = 0

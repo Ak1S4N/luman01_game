@@ -17,7 +17,7 @@ func _ready() -> void:
 		load_data()
 
 func _on_timer_timeout() -> void:
-	if not GameSettings.paused:
+	if not GameSettings.paused and not GameSettings.on_event:
 		var jeg = character_manager.job_exp_gain
 		income = current_job.salary
 		wallet += current_job.salary
