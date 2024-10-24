@@ -2,6 +2,7 @@ extends CanvasLayer
 
 const WORLD = preload("res://new_src/world/world.tscn")
 
+#signals
 
 func new_game() -> void:
 	SaveLoad.is_new_game = true
