@@ -43,7 +43,9 @@ func save() -> void:
 	var character_name = "player"
 	var character_data: Dictionary = {
 		"current_job": current_job,
-		"wallet": wallet
+		"wallet": wallet,
+		"age": character_manager.age,
+		"day": character_manager.day
 		}
 	
 	SaveLoad.save(character_data, character_name)

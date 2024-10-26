@@ -23,7 +23,7 @@ func _ready() -> void:
 
 func _on_apply_button_up() -> void:
 	if job.job_required:
-		if job.job_required.level == job.jr_level_required:
+		if job.job_required.level >= job.jr_level_required:
 			emit_signal("get_job", job)
 	else:
 		emit_signal("get_job", job)

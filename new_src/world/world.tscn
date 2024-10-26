@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://dxmbnomyn2365"]
+[gd_scene load_steps=70 format=3 uid="uid://dxmbnomyn2365"]
 
 [ext_resource type="Texture2D" uid="uid://dht1dcbnqtsxd" path="res://assets/main/maps/map2.png" id="1_8rker"]
 [ext_resource type="Script" path="res://new_src/world/world.gd" id="1_vqio8"]
@@ -8,9 +8,9 @@
 [ext_resource type="Script" path="res://new_src/scripts/managers/character_manager.gd" id="4_l53j5"]
 [ext_resource type="Script" path="res://new_src/scripts/managers/UI_manager.gd" id="5_cneqf"]
 [ext_resource type="Script" path="res://new_src/scripts/managers/area_manager.gd" id="6_i2gso"]
-[ext_resource type="Texture2D" uid="uid://bxbh6s0pgvo0v" path="res://assets/test_assets/character_icons/reference_1.jpg" id="6_ky8r7"]
 [ext_resource type="Script" path="res://new_src/scripts/managers/jobs_manager.gd" id="8_jero7"]
 [ext_resource type="Texture2D" uid="uid://cjurqruqb6bqk" path="res://assets/main/buildings/lumber_mill/lumber_mill_clicked.png" id="9_r1y5i"]
+[ext_resource type="Texture2D" uid="uid://b4ukpt2tbjq18" path="res://assets/main/character_portrait/character_portraits.png" id="9_upsjh"]
 [ext_resource type="Texture2D" uid="uid://bwf34o84u8y2d" path="res://assets/main/buildings/lumber_mill/lumber_mill_highlight.png" id="10_ctf6i"]
 [ext_resource type="Texture2D" uid="uid://bilo35ew7aomf" path="res://assets/main/buildings/blacksmith/blacksmith_clicked.png" id="12_xbmph"]
 [ext_resource type="Texture2D" uid="uid://bvg3fjmirup72" path="res://assets/main/buildings/blacksmith/blacksmith_highlight.png" id="13_dw1md"]
@@ -61,12 +61,17 @@
 [ext_resource type="Resource" uid="uid://da6gmo1xmdbkd" path="res://new_src/resources/jobs/slave_quarters/lowly.tres" id="49_2kcva"]
 [ext_resource type="Resource" uid="uid://boc1qd8dynrxl" path="res://new_src/resources/jobs/slave_quarters/valued.tres" id="50_oca5b"]
 [ext_resource type="Script" path="res://new_src/world/paused_menu.gd" id="61_aif7j"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/shop_UI_manager.gd" id="61_uotj2"]
 [ext_resource type="Script" path="res://new_src/scripts/managers/event_manager.gd" id="61_vnwhq"]
 [ext_resource type="Resource" uid="uid://207jv80y07uc" path="res://new_src/resources/events/test_event.tres" id="62_wffkc"]
 [ext_resource type="Script" path="res://new_src/scripts/classes/event.gd" id="63_mpann"]
 [ext_resource type="Resource" uid="uid://b5kik6x0sjoa" path="res://new_src/resources/events/higher_exp.tres" id="64_bnu8n"]
 [ext_resource type="Resource" uid="uid://cedtcvlwf17k2" path="res://new_src/resources/events/random_job.tres" id="65_ueop6"]
 [ext_resource type="Resource" uid="uid://dvcbmbn2nrsj8" path="res://new_src/resources/events/low_exp.tres" id="66_subff"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd8sa"]
+atlas = ExtResource("9_upsjh")
+region = Rect2(0, 0, 32, 32)
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_vqio8")
@@ -102,166 +107,6 @@ texture = ExtResource("1_8rker")
 [node name="area_manager" type="Node" parent="CanvasLayer" node_paths=PackedStringArray("interior_manager")]
 script = ExtResource("6_i2gso")
 interior_manager = NodePath("../interior_manager")
-
-[node name="UI" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("finance_manager")]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-script = ExtResource("5_cneqf")
-finance_manager = NodePath("../../finance_manager")
-
-[node name="open_char_stat" type="Button" parent="CanvasLayer/UI"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -8.0
-offset_bottom = 8.0
-grow_horizontal = 0
-text = "Character Status"
-
-[node name="status" type="Panel" parent="CanvasLayer/UI"]
-visible = false
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -369.0
-grow_horizontal = 0
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/status"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_desc" type="Panel" parent="CanvasLayer/UI/status/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="portrait" type="TextureRect" parent="CanvasLayer/UI/status/VBoxContainer/character_desc"]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 7.0
-offset_right = 133.0
-offset_bottom = 139.0
-texture = ExtResource("6_ky8r7")
-expand_mode = 1
-
-[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/character_desc"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="portrait_space" type="Control" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="labels" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="name" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/labels"]
-layout_mode = 2
-text = "Name: %s"
-
-[node name="age" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/labels"]
-layout_mode = 2
-text = "Age: %s"
-
-[node name="filler" type="Control" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="finance_bar" type="Panel" parent="CanvasLayer/UI/status/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "My Money:"
-horizontal_alignment = 1
-
-[node name="wallet_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "%s"
-
-[node name="Label2" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "Job Salary:"
-
-[node name="salary_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "%s"
-
-[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-text = "Current Job:"
-horizontal_alignment = 1
-
-[node name="job_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-text = "%s"
-
-[node name="job_exp" type="ProgressBar" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-
-[node name="Label2" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-text = "Job's Level:"
-
-[node name="jl_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-text = "%s"
-
-[node name="Control" type="Control" parent="CanvasLayer/UI/status/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Control2" type="Control" parent="CanvasLayer/UI/status/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="exit_char_stat" type="Button" parent="CanvasLayer/UI/status"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -8.0
-offset_bottom = 8.0
-grow_horizontal = 0
-text = "Exit"
 
 [node name="buildings" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -905,6 +750,231 @@ lumber_mill = Array[ExtResource("23_2gtsp")]([ExtResource("42_4roej"), ExtResour
 refugee_quarters = Array[ExtResource("23_2gtsp")]([ExtResource("2_stgm5"), ExtResource("46_b6nln"), ExtResource("47_u50n8")])
 slave_quarters = Array[ExtResource("23_2gtsp")]([ExtResource("48_amx4i"), ExtResource("49_2kcva"), ExtResource("50_oca5b")])
 
+[node name="UI" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("finance_manager")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_cneqf")
+finance_manager = NodePath("../../finance_manager")
+
+[node name="open_char_stat" type="Button" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+text = "Character Status"
+
+[node name="status" type="Panel" parent="CanvasLayer/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -369.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/status"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="character_desc" type="Panel" parent="CanvasLayer/UI/status/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="portrait" type="TextureRect" parent="CanvasLayer/UI/status/VBoxContainer/character_desc"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 133.0
+offset_bottom = 139.0
+texture = SubResource("AtlasTexture_qd8sa")
+expand_mode = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/character_desc"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="portrait_space" type="Control" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="labels" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="name" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/labels"]
+layout_mode = 2
+text = "Name: %s"
+
+[node name="age" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/labels"]
+layout_mode = 2
+text = "Age: %s"
+
+[node name="filler" type="Control" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="finance_bar" type="Panel" parent="CanvasLayer/UI/status/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "My Money:"
+horizontal_alignment = 1
+
+[node name="wallet_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "%s"
+
+[node name="Label2" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Job Salary:"
+
+[node name="salary_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "%s"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Current Job:"
+horizontal_alignment = 1
+
+[node name="job_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "%s"
+
+[node name="job_exp" type="ProgressBar" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Job's Level:"
+
+[node name="jl_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "%s"
+
+[node name="Control" type="Control" parent="CanvasLayer/UI/status/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="CanvasLayer/UI/status/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="exit_char_stat" type="Button" parent="CanvasLayer/UI/status"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+text = "Exit"
+
+[node name="shop_ui" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("character_manager")]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 761.0
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("61_uotj2")
+character_manager = NodePath("../../finance_manager/character_manager")
+
+[node name="open_shop" type="Button" parent="CanvasLayer/shop_ui"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Open Shop"
+
+[node name="shop" type="Panel" parent="CanvasLayer/shop_ui"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -410.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="exit_shop" type="Button" parent="CanvasLayer/shop_ui/shop"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Exit Shop
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/shop_ui/shop"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="status_bar" type="Control" parent="CanvasLayer/shop_ui/shop/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="shop_list" type="Control" parent="CanvasLayer/shop_ui/shop/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+mouse_filter = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/shop_ui/shop/VBoxContainer/shop_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/shop_ui/shop/VBoxContainer/shop_list/ScrollContainer"]
+layout_mode = 2
+
 [node name="event_manager" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("finance_manager")]
 layout_mode = 3
 anchors_preset = 15
@@ -916,30 +986,12 @@ mouse_filter = 2
 script = ExtResource("61_vnwhq")
 first_event = ExtResource("62_wffkc")
 random_general_event = Array[ExtResource("63_mpann")]([ExtResource("64_bnu8n"), ExtResource("65_ueop6"), ExtResource("66_subff")])
-chance = 0.03
+chance = 0.004
 finance_manager = NodePath("../../finance_manager")
 
 [node name="Timer" type="Timer" parent="CanvasLayer/event_manager"]
 wait_time = 0.5
 autostart = true
-
-[node name="text_notif" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -203.0
-offset_right = 511.0
-grow_vertical = 0
-mouse_filter = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/text_notif"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/text_notif/ScrollContainer"]
-layout_mode = 2
 
 [node name="paused_menu" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("job_manager", "finance_manager", "event_manager")]
 visible = false
@@ -1089,8 +1141,7 @@ grow_vertical = 0
 text = "Exit Setttings"
 
 [connection signal="timeout" from="finance_manager/Timer" to="finance_manager" method="_on_timer_timeout"]
-[connection signal="button_up" from="CanvasLayer/UI/open_char_stat" to="CanvasLayer/UI" method="_on_open_char_stat_button_up"]
-[connection signal="button_up" from="CanvasLayer/UI/status/exit_char_stat" to="CanvasLayer/UI" method="_on_exit_char_stat_button_up"]
+[connection signal="timeout" from="finance_manager/Timer" to="finance_manager/character_manager" method="_on_timer_timeout"]
 [connection signal="button_up" from="CanvasLayer/buildings/map1/lumber_mill" to="CanvasLayer/area_manager" method="_on_lumber_mill_button_up"]
 [connection signal="button_up" from="CanvasLayer/buildings/map1/blacksmith" to="CanvasLayer/area_manager" method="_on_blacksmith_button_up"]
 [connection signal="button_up" from="CanvasLayer/buildings/map1/farm" to="CanvasLayer/area_manager" method="_on_farm_button_up"]
@@ -1105,6 +1156,10 @@ text = "Exit Setttings"
 [connection signal="button_up" from="CanvasLayer/interior_manager/hunting_lodge/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
 [connection signal="button_up" from="CanvasLayer/interior_manager/slave_quarters/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
 [connection signal="button_up" from="CanvasLayer/interior_manager/refugee_quarters/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/UI/open_char_stat" to="CanvasLayer/UI" method="_on_open_char_stat_button_up"]
+[connection signal="button_up" from="CanvasLayer/UI/status/exit_char_stat" to="CanvasLayer/UI" method="_on_exit_char_stat_button_up"]
+[connection signal="button_up" from="CanvasLayer/shop_ui/open_shop" to="CanvasLayer/shop_ui" method="open_shop"]
+[connection signal="button_up" from="CanvasLayer/shop_ui/shop/exit_shop" to="CanvasLayer/shop_ui" method="exit_shop"]
 [connection signal="timeout" from="CanvasLayer/event_manager/Timer" to="CanvasLayer/event_manager" method="_on_timer_timeout"]
 [connection signal="button_up" from="CanvasLayer/paused_menu/button_screen/VBoxContainer/resume" to="CanvasLayer/paused_menu" method="resume"]
 [connection signal="button_up" from="CanvasLayer/paused_menu/button_screen/VBoxContainer/settings" to="CanvasLayer/paused_menu" method="open_settings"]

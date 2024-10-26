@@ -11,6 +11,10 @@ extends Managers
 
 @export var finance_manager: Managers
 
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("toggle_character_stats"):
+		toggle_character_stats(!status.visible)
+
 func _process(delta: float) -> void:
 	wallet_label.text = str(finance_manager.wallet)
 	job_label.text = str(finance_manager.current_job.job_title)

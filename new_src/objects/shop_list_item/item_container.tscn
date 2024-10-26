@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnu5ndduh7mwd"]
+
+[ext_resource type="Script" path="res://new_src/objects/shop_list_item/item_container.gd" id="1_uqgn5"]
+
+[node name="item_container" type="MarginContainer"]
+offset_right = 445.0
+offset_bottom = 58.0
+script = ExtResource("1_uqgn5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Name:"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "BUY"
+
+[connection signal="button_up" from="VBoxContainer/Button" to="." method="buy"]

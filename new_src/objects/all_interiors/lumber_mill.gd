@@ -1,5 +1,7 @@
 extends Interior
 
+signal is_working_here(building_name)
+
 var job_list: Array[Job]
 @onready var job_list_container: VBoxContainer = $interior/VBoxContainer/job_list/ScrollContainer/VBoxContainer
 
@@ -22,3 +24,4 @@ func _ready() -> void:
 func send_to_manager(job_rsc: Job):
 	if job_manager.has_method('job_transfer'):
 		job_manager.job_transfer(job_rsc)
+	
