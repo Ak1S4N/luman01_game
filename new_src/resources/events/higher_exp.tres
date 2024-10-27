@@ -17,3 +17,6 @@ option = 0
 job_options = Array[ExtResource("1_0yeke")]([])
 value_options = Array[int]([50, -50])
 value_name = Array[String](["Use this as Motivation", "Wallow in Sadness"])
+conditions_needed = 0
+cond_type_needed = "character_conditions"
+event_condition = 1

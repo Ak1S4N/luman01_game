@@ -11,3 +11,6 @@ psi_perle = 0.0
 exp = 0.0
 max_exp = 0.0
 pmei_perle = 0.0
+jr_level_required = 0
+item_required = 0
+job_condition = 3

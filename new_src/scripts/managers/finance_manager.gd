@@ -1,11 +1,12 @@
 extends Managers
+class_name FinanceManager
 
 var income: int
 var expenses: int
 var wallet: int = 0
 
 @export var current_job: Job
-@onready var character_manager: Node = $character_manager
+@export var character_manager: CharacterManager
 @export var job_manager: Managers
 
 
@@ -34,6 +35,11 @@ func _on_timer_timeout() -> void:
 
 func job_transfer(job_rsc: Job) -> void:
 	current_job = job_rsc
+	if job_rsc.job_condition:
+		character_manager.conditions_met["job_conditions"].clear()
+		character_manager.append_condition("job_conditions", job_rsc.job_condition)
+	else:
+		print_debug("oops! Job doesn't have condition_id!")
 
 func add_exp(value: int) -> void:
 	current_job.exp += value

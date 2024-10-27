@@ -4,10 +4,13 @@
 
 [resource]
 script = ExtResource("1_ksakm")
-job_title = ""
-salary = 0
-level = 0
-psi_perle = 0.0
+job_title = "Crab Trapper"
+salary = 3
+level = 1
+psi_perle = 0.02
 exp = 0.0
-max_exp = 0.0
-pmei_perle = 0.0
+max_exp = 100.0
+pmei_perle = 0.2
+jr_level_required = 0
+item_required = 0
+job_condition = 14

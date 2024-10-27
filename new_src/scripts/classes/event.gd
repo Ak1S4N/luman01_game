@@ -13,3 +13,11 @@ class_name Event
 @export var job_options: Array[Job]
 @export var value_options: Array[int]
 @export var value_name: Array[String]
+
+@export var conditions_needed: int
+@export_enum("event_conditions",
+	"item_conditions",
+	"job_conditions",
+	"character_conditions") var cond_type_needed: String
+
+@export var event_condition: int

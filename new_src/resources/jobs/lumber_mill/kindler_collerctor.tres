@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_vocyc")
 job_title = "Kindler Collector"
-salary = 45
+salary = 3
 level = 1
 psi_perle = 0.15
 exp = 0.0
@@ -15,3 +15,4 @@ pmei_perle = 0.15
 job_required = ExtResource("1_ea80b")
 jr_level_required = 2
 item_required = 0
+job_condition = 22

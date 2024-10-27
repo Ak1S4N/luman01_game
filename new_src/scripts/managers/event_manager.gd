@@ -5,8 +5,8 @@ extends Managers
 
 @export_range(0.0,1.0) var chance: float
 
-
-@export var finance_manager: Managers
+@export var character_manager: CharacterManager
+@export var finance_manager: FinanceManager
 
 const EVENT = preload("res://new_src/objects/event_scene/event.tscn")
 
@@ -28,18 +28,18 @@ func _on_timer_timeout() -> void:
 	if not GameSettings.paused and not GameSettings.on_event:
 		var randnum = randf_range(0.0, 1.0)
 		random_general_event.shuffle()
-		if randnum <= chance:
-			var event_instance = EVENT.instantiate()
-			var rand_event = random_general_event[0]
-			if rand_event.has_occured:
-				random_general_event.shuffle()
-				rand_event = random_general_event[0]
-			elif not rand_event.has_occured:
-				event_instance.event = rand_event
-				event_instance.give_value.connect(new_value)
-				event_instance.give_job.connect(set_job)
-				add_child(event_instance)
-				GameSettings.on_event = true
+		var rand_event = random_general_event[0]
+		
+		var condition_type = character_manager.conditions_met[rand_event.cond_type_needed]
+		if condition_type.has(rand_event.conditions_needed):
+			if randnum <= chance:
+				var event_instance = EVENT.instantiate()
+				if not rand_event.has_occured:
+					event_instance.event = rand_event
+					event_instance.give_value.connect(new_value)
+					event_instance.give_job.connect(set_job)
+					add_child(event_instance)
+					GameSettings.on_event = true
 
 
 func set_job(event: Event, new_job: Job):
@@ -47,6 +47,7 @@ func set_job(event: Event, new_job: Job):
 	for i in get_children():
 		if i.name == "event":
 			i.queue_free()
+	character_manager.append_condition("event_conditions", event.event_condition)
 	event.has_occured = true
 	GameSettings.on_event = false
 
@@ -55,6 +56,8 @@ func new_value(event: Event, value: int):
 	for i in get_children():
 		if i.name == "event":
 			i.queue_free()
+	
+	character_manager.append_condition("event_conditions", event.event_condition)
 	event.has_occured = true
 	GameSettings.on_event = false
 

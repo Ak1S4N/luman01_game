@@ -15,3 +15,6 @@ option = 0
 job_options = Array[ExtResource("1_c5uyq")]([ExtResource("2_dphp4"), ExtResource("3_220ry")])
 value_options = Array[int]([])
 value_name = Array[String]([])
+conditions_needed = 0
+cond_type_needed = "event_conditions"
+event_condition = 1

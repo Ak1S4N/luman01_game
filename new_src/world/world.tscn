@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://dxmbnomyn2365"]
+[gd_scene load_steps=73 format=3 uid="uid://dxmbnomyn2365"]
 
 [ext_resource type="Texture2D" uid="uid://dht1dcbnqtsxd" path="res://assets/main/maps/map2.png" id="1_8rker"]
 [ext_resource type="Script" path="res://new_src/world/world.gd" id="1_vqio8"]
@@ -68,6 +68,9 @@
 [ext_resource type="Resource" uid="uid://b5kik6x0sjoa" path="res://new_src/resources/events/higher_exp.tres" id="64_bnu8n"]
 [ext_resource type="Resource" uid="uid://cedtcvlwf17k2" path="res://new_src/resources/events/random_job.tres" id="65_ueop6"]
 [ext_resource type="Resource" uid="uid://dvcbmbn2nrsj8" path="res://new_src/resources/events/low_exp.tres" id="66_subff"]
+[ext_resource type="Resource" uid="uid://bkl7ygmo8y0g0" path="res://new_src/resources/events/more_jobs.tres" id="68_7b4v1"]
+[ext_resource type="Resource" uid="uid://15bjfuh0qo3i" path="res://new_src/resources/events/high_exp_crab_trapper.tres" id="69_vnx21"]
+[ext_resource type="Resource" uid="uid://bm1w46jmdxe5i" path="res://new_src/resources/events/exp_beggar.tres" id="70_qvu22"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qd8sa"]
 atlas = ExtResource("9_upsjh")
@@ -76,16 +79,17 @@ region = Rect2(0, 0, 32, 32)
 [node name="world" type="Node2D"]
 script = ExtResource("1_vqio8")
 
-[node name="finance_manager" type="Node" parent="." node_paths=PackedStringArray("job_manager")]
+[node name="finance_manager" type="Node" parent="." node_paths=PackedStringArray("character_manager", "job_manager")]
 script = ExtResource("3_mbe7k")
 current_job = ExtResource("2_stgm5")
+character_manager = NodePath("character_manager")
 job_manager = NodePath("../CanvasLayer/job_manager")
 
 [node name="character_manager" type="Node" parent="finance_manager"]
 script = ExtResource("4_l53j5")
 
 [node name="Timer" type="Timer" parent="finance_manager"]
-wait_time = 0.5
+wait_time = 0.1
 autostart = true
 
 [node name="panorama" type="Node2D" parent="."]
@@ -975,7 +979,7 @@ grow_vertical = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/shop_ui/shop/VBoxContainer/shop_list/ScrollContainer"]
 layout_mode = 2
 
-[node name="event_manager" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("finance_manager")]
+[node name="event_manager" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("character_manager", "finance_manager")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -985,15 +989,16 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("61_vnwhq")
 first_event = ExtResource("62_wffkc")
-random_general_event = Array[ExtResource("63_mpann")]([ExtResource("64_bnu8n"), ExtResource("65_ueop6"), ExtResource("66_subff")])
-chance = 0.004
+random_general_event = Array[ExtResource("63_mpann")]([ExtResource("64_bnu8n"), ExtResource("65_ueop6"), ExtResource("66_subff"), ExtResource("68_7b4v1"), ExtResource("69_vnx21"), ExtResource("70_qvu22")])
+chance = 0.01
+character_manager = NodePath("../../finance_manager/character_manager")
 finance_manager = NodePath("../../finance_manager")
 
 [node name="Timer" type="Timer" parent="CanvasLayer/event_manager"]
-wait_time = 0.5
+wait_time = 0.1
 autostart = true
 
-[node name="paused_menu" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("job_manager", "finance_manager", "event_manager")]
+[node name="paused_menu" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("job_manager", "finance_manager", "event_manager", "character_manager")]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -1005,6 +1010,7 @@ script = ExtResource("61_aif7j")
 job_manager = NodePath("../job_manager")
 finance_manager = NodePath("../../finance_manager")
 event_manager = NodePath("../event_manager")
+character_manager = NodePath("../../finance_manager/character_manager")
 
 [node name="background" type="Panel" parent="CanvasLayer/paused_menu"]
 layout_mode = 1

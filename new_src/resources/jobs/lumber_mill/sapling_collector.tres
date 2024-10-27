@@ -15,3 +15,4 @@ pmei_perle = 0.12
 job_required = ExtResource("1_5p7e6")
 jr_level_required = 3
 item_required = 0
+job_condition = 25

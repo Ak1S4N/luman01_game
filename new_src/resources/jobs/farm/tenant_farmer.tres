@@ -13,3 +13,4 @@ max_exp = 1.0
 pmei_perle = 1.0
 jr_level_required = 1
 item_required = 0
+job_condition = 12

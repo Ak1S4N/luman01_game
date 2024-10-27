@@ -14,3 +14,5 @@ class_name Job
 @export var job_required: Job
 @export var jr_level_required: int #JR is Job Required
 @export_enum('None', 'Tools', 'Stave', 'Sling') var item_required: int
+
+@export var job_condition: int
