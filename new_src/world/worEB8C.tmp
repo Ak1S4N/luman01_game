@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://dxmbnomyn2365"]
+[gd_scene load_steps=73 format=3 uid="uid://dxmbnomyn2365"]
 
 [ext_resource type="Texture2D" uid="uid://dht1dcbnqtsxd" path="res://assets/main/maps/map2.png" id="1_8rker"]
 [ext_resource type="Script" path="res://new_src/world/world.gd" id="1_vqio8"]
@@ -71,7 +71,6 @@
 [ext_resource type="Resource" uid="uid://bkl7ygmo8y0g0" path="res://new_src/resources/events/more_jobs.tres" id="68_7b4v1"]
 [ext_resource type="Resource" uid="uid://15bjfuh0qo3i" path="res://new_src/resources/events/high_exp_crab_trapper.tres" id="69_vnx21"]
 [ext_resource type="Resource" uid="uid://bm1w46jmdxe5i" path="res://new_src/resources/events/exp_beggar.tres" id="70_qvu22"]
-[ext_resource type="Script" path="res://new_src/world/hover_select.gd" id="72_mtdvr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qd8sa"]
 atlas = ExtResource("9_upsjh")
@@ -777,6 +776,7 @@ grow_horizontal = 0
 text = "Character Status"
 
 [node name="status" type="Panel" parent="CanvasLayer/UI"]
+visible = false
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -897,20 +897,9 @@ text = "Job's Level:"
 layout_mode = 2
 text = "%s"
 
-[node name="item_list" type="Panel" parent="CanvasLayer/UI/status/VBoxContainer"]
+[node name="Control" type="Control" parent="CanvasLayer/UI/status/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/UI/status/VBoxContainer/item_list"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/item_list/ScrollContainer"]
-layout_mode = 2
 
 [node name="Control2" type="Control" parent="CanvasLayer/UI/status/VBoxContainer"]
 layout_mode = 2
@@ -990,7 +979,7 @@ grow_vertical = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/shop_ui/shop/VBoxContainer/shop_list/ScrollContainer"]
 layout_mode = 2
 
-[node name="event_manager" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("character_manager", "finance_manager", "hover_select")]
+[node name="event_manager" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("character_manager", "finance_manager")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1004,7 +993,6 @@ random_general_event = Array[ExtResource("63_mpann")]([ExtResource("64_bnu8n"), 
 chance = 0.01
 character_manager = NodePath("../../finance_manager/character_manager")
 finance_manager = NodePath("../../finance_manager")
-hover_select = NodePath("../hover_select")
 
 [node name="Timer" type="Timer" parent="CanvasLayer/event_manager"]
 wait_time = 0.1
@@ -1157,27 +1145,6 @@ offset_bottom = -31.5
 grow_horizontal = 2
 grow_vertical = 0
 text = "Exit Setttings"
-
-[node name="hover_select" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 212.0
-offset_top = 108.0
-offset_right = 543.0
-offset_bottom = 182.0
-script = ExtResource("72_mtdvr")
-
-[node name="Panel" type="Panel" parent="CanvasLayer/hover_select"]
-visible = false
-layout_mode = 0
-offset_right = 259.0
-offset_bottom = 48.0
-
-[node name="Label" type="Label" parent="CanvasLayer/hover_select/Panel"]
-layout_mode = 0
-offset_right = 180.0
-offset_bottom = 23.0
-text = "Increases Job EXP by 50"
 
 [connection signal="timeout" from="finance_manager/Timer" to="finance_manager" method="_on_timer_timeout"]
 [connection signal="timeout" from="finance_manager/Timer" to="finance_manager/character_manager" method="_on_timer_timeout"]

@@ -1,4 +1,5 @@
 extends Managers
+class_name AreaManager
 
 signal enter_building(toggle, id)
 

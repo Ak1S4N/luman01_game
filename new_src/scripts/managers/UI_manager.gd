@@ -1,4 +1,5 @@
 extends Managers
+class_name UIManager
 
 @onready var wallet_label: Label = $status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer/wallet_label
 @onready var job_label: Label = $status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2/job_label

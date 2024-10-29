@@ -13,10 +13,9 @@ But you still have work to do...
 You've been struck with a decision..."
 has_occured = false
 type = 1
-option = 0
 job_options = Array[ExtResource("1_6wvdx")]([])
 value_options = Array[int]([-40, -20])
 value_name = Array[String](["Be a full-time father for the baby", "Leave your wife in the weekdays for work"])
-conditions_needed = Array[int]([16])
+options_description = Array[String](["Decreases Job EXP by 40", "Decreases Job EXP by 20"])
+conditions_needed = "teenager"
 cond_type_needed = "character_conditions"
-event_condition = 2

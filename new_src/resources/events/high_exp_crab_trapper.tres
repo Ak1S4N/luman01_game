@@ -11,10 +11,9 @@ event_description = "As you were setting traps in the riverside, one crab clench
 You were struck with a decision..."
 has_occured = false
 type = 1
-option = 0
 job_options = Array[ExtResource("1_pr25i")]([])
 value_options = Array[int]([50, 20])
 value_name = Array[String](["Chase it", "Let it go"])
-conditions_needed = 14
+options_description = Array[String](["Increases Job EXP by 50", "Increases Job EXP by 20"])
+conditions_needed = "Crab Trapper"
 cond_type_needed = "job_conditions"
-event_condition = 5

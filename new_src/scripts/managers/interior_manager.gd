@@ -1,4 +1,5 @@
 extends Managers
+class_name InteriorManager
 
 signal open_building
 

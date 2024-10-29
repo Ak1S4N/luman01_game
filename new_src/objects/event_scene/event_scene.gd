@@ -2,6 +2,8 @@ extends PanelContainer
 
 signal give_job(event, job)
 signal give_value(event, val)
+signal open_description(description)
+signal close_description
 
 @export var event: Event
 
@@ -39,3 +41,19 @@ func _on_option_2_button_up() -> void:
 			emit_signal("give_job", event, event.job_options[1])
 		1:
 			emit_signal("give_value", event, event.value_options[1])
+
+
+func option_1_mouse_entered() -> void:
+	emit_signal("open_description", event.options_description[0])
+
+
+func option_1_mouse_exit() -> void:
+	emit_signal("close_description")
+	
+
+func option_2_mouse_entered() -> void:
+	emit_signal("open_description", event.options_description[1])
+
+
+func option_2_mouse_exit() -> void:
+	emit_signal("close_description")

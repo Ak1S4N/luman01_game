@@ -15,10 +15,9 @@ You got pushed into the ground instead,
 You were struck with a decision"
 has_occured = false
 type = 1
-option = 0
 job_options = Array[ExtResource("1_hp32f")]([])
 value_options = Array[int]([20, 10])
 value_name = Array[String](["Push him back", "Run away"])
-conditions_needed = 1
+options_description = Array[String](["Increases Job Exp by 20", "Increases Job Exp by 10"])
+conditions_needed = "Beggar"
 cond_type_needed = "job_conditions"
-event_condition = 6

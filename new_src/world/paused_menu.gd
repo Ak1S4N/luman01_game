@@ -3,7 +3,7 @@ extends Control
 @onready var world: Node2D = $"../.."
 @onready var settings: Panel = $settings
 
-@export var job_manager: Managers
+@export var job_manager: JobManager
 @export var finance_manager: FinanceManager
 @export var event_manager: Managers
 @export var character_manager: CharacterManager

@@ -7,10 +7,11 @@ extends Managers
 
 const ITEM_CONTAINER = preload("res://new_src/objects/shop_list_item/item_container.tscn")
 
+var _CONDITIONS_MET = preload("res://new_src/resources/conditions_met/ ConditionsMet.tres")
 #Add items here when desired
 var item_list: Dictionary = {
-	"test_item": 10,
-	"test_hammer": 23
+	"test_item": "Potion",
+	"test_hammer": "Hammer"
 }
 
 func _ready() -> void:
@@ -22,7 +23,7 @@ func _ready() -> void:
 
 func get_item(item_name: String) -> void:
 	var condition_id = item_list.get(item_name)
-	character_manager.append_condition("item_conditions", condition_id)
+	_CONDITIONS_MET.append_condition("item_conditions", condition_id)
 
 
 func open_shop() -> void:

@@ -15,10 +15,9 @@ A wealthy man reached up to you to hand you two contracts...
 You have 2 job offers"
 has_occured = false
 type = 0
-option = 0
 job_options = Array[ExtResource("1_40vnx")]([ExtResource("2_ddhtk"), ExtResource("3_1ngxp")])
 value_options = Array[int]([])
 value_name = Array[String]([])
-conditions_needed = 1
-cond_type_needed = "event_conditions"
-event_condition = 3
+options_description = Array[String](["Change your Job into Crab Trapper", "Change your Job into Kindler Collector"])
+conditions_needed = ""
+cond_type_needed = ""

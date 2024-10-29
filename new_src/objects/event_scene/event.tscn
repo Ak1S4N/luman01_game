@@ -50,4 +50,8 @@ layout_mode = 2
 text = "option 2"
 
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/option_1" to="." method="_on_option_1_button_up"]
+[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/option_1" to="." method="option_1_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/HBoxContainer/option_1" to="." method="option_1_mouse_exit"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/option_2" to="." method="_on_option_2_button_up"]
+[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/option_2" to="." method="option_2_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/HBoxContainer/option_2" to="." method="option_2_mouse_exit"]

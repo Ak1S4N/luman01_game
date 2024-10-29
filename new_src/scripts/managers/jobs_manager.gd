@@ -1,4 +1,5 @@
 extends Managers
+class_name JobManager
 
 signal get_job(job)
 

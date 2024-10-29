@@ -9,6 +9,7 @@ var wallet: int = 0
 @export var character_manager: CharacterManager
 @export var job_manager: Managers
 
+var _CONDITIONS_MET = preload("res://new_src/resources/conditions_met/ ConditionsMet.tres")
 
 func _ready() -> void:
 	if job_manager:
@@ -35,9 +36,9 @@ func _on_timer_timeout() -> void:
 
 func job_transfer(job_rsc: Job) -> void:
 	current_job = job_rsc
-	if job_rsc.job_condition:
-		character_manager.conditions_met["job_conditions"].clear()
-		character_manager.append_condition("job_conditions", job_rsc.job_condition)
+	if job_rsc.job_title:
+		_CONDITIONS_MET.conditions_met["job_conditions"].clear()
+		_CONDITIONS_MET.append_condition("job_conditions", job_rsc.job_title)
 	else:
 		print_debug("oops! Job doesn't have condition_id!")
 
