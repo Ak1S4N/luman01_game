@@ -25,6 +25,12 @@ func _on_timer_timeout() -> void:
 		wallet += current_job.salary
 		current_job.exp += jeg
 		
+		if character_manager.current_items:
+			for i in character_manager.current_items:
+				if i.price:
+					wallet -= i.price
+		
+		
 		if current_job.exp >= current_job.max_exp:
 			var add_max_exp = (current_job.max_exp * current_job.pmei_perle)
 			var add_salary = (current_job.salary * current_job.psi_perle)
@@ -33,6 +39,10 @@ func _on_timer_timeout() -> void:
 			current_job.max_exp += add_max_exp
 			current_job.level += 1
 			current_job.exp = 0
+	
+	if wallet <= 0:
+		wallet = 0
+	
 
 func job_transfer(job_rsc: Job) -> void:
 	current_job = job_rsc

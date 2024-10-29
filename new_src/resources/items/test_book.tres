@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bjgtagxgsev78"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/item.gd" id="1_ivy07"]
+
+[resource]
+script = ExtResource("1_ivy07")
+item_name = "Some Test Book"
+item_description = "Increase Productivity by 2"
+value = 2.0
+price = 30
+item_type = 0

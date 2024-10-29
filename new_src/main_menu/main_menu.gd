@@ -11,6 +11,7 @@ func new_game() -> void:
 
 func continue_game() -> void:
 	SaveLoad.is_new_game = false
+	GameSettings.paused = false
 	get_tree().change_scene_to_file("res://new_src/world/world.tscn")
 
 func settings() -> void:

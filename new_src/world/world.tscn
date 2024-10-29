@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://dxmbnomyn2365"]
+[gd_scene load_steps=77 format=3 uid="uid://dxmbnomyn2365"]
 
 [ext_resource type="Texture2D" uid="uid://dht1dcbnqtsxd" path="res://assets/main/maps/map2.png" id="1_8rker"]
 [ext_resource type="Script" path="res://new_src/world/world.gd" id="1_vqio8"]
@@ -63,8 +63,11 @@
 [ext_resource type="Script" path="res://new_src/world/paused_menu.gd" id="61_aif7j"]
 [ext_resource type="Script" path="res://new_src/scripts/managers/shop_UI_manager.gd" id="61_uotj2"]
 [ext_resource type="Script" path="res://new_src/scripts/managers/event_manager.gd" id="61_vnwhq"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/item.gd" id="62_1s0k7"]
 [ext_resource type="Resource" uid="uid://207jv80y07uc" path="res://new_src/resources/events/test_event.tres" id="62_wffkc"]
+[ext_resource type="Resource" uid="uid://bjgtagxgsev78" path="res://new_src/resources/items/test_book.tres" id="63_akti7"]
 [ext_resource type="Script" path="res://new_src/scripts/classes/event.gd" id="63_mpann"]
+[ext_resource type="Resource" uid="uid://cjt6xnhdxnc0a" path="res://new_src/resources/items/test_potion.tres" id="64_2jgn8"]
 [ext_resource type="Resource" uid="uid://b5kik6x0sjoa" path="res://new_src/resources/events/higher_exp.tres" id="64_bnu8n"]
 [ext_resource type="Resource" uid="uid://cedtcvlwf17k2" path="res://new_src/resources/events/random_job.tres" id="65_ueop6"]
 [ext_resource type="Resource" uid="uid://dvcbmbn2nrsj8" path="res://new_src/resources/events/low_exp.tres" id="66_subff"]
@@ -755,7 +758,7 @@ lumber_mill = Array[ExtResource("23_2gtsp")]([ExtResource("42_4roej"), ExtResour
 refugee_quarters = Array[ExtResource("23_2gtsp")]([ExtResource("2_stgm5"), ExtResource("46_b6nln"), ExtResource("47_u50n8")])
 slave_quarters = Array[ExtResource("23_2gtsp")]([ExtResource("48_amx4i"), ExtResource("49_2kcva"), ExtResource("50_oca5b")])
 
-[node name="UI" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("finance_manager")]
+[node name="UI" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("finance_manager", "character_manager")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -765,6 +768,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("5_cneqf")
 finance_manager = NodePath("../../finance_manager")
+character_manager = NodePath("../../finance_manager/character_manager")
 
 [node name="open_char_stat" type="Button" parent="CanvasLayer/UI"]
 layout_mode = 1
@@ -777,6 +781,7 @@ grow_horizontal = 0
 text = "Character Status"
 
 [node name="status" type="Panel" parent="CanvasLayer/UI"]
+visible = false
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -897,11 +902,11 @@ text = "Job's Level:"
 layout_mode = 2
 text = "%s"
 
-[node name="item_list" type="Panel" parent="CanvasLayer/UI/status/VBoxContainer"]
+[node name="inventory" type="Panel" parent="CanvasLayer/UI/status/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/UI/status/VBoxContainer/item_list"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/UI/status/VBoxContainer/inventory"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -909,7 +914,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/item_list/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/inventory/ScrollContainer"]
 layout_mode = 2
 
 [node name="Control2" type="Control" parent="CanvasLayer/UI/status/VBoxContainer"]
@@ -935,6 +940,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("61_uotj2")
 character_manager = NodePath("../../finance_manager/character_manager")
+item_list = Array[ExtResource("62_1s0k7")]([ExtResource("63_akti7"), ExtResource("64_2jgn8")])
 
 [node name="open_shop" type="Button" parent="CanvasLayer/shop_ui"]
 layout_mode = 0
