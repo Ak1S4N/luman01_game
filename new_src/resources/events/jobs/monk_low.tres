@@ -17,5 +17,5 @@ job_options = Array[ExtResource("1_34n64")]([])
 value_options = Array[int]([-30, -30])
 value_name = Array[String](["Meditate harder", "Distract him when he meditates"])
 options_description = Array[String](["Job Exp decreases", "Job Exp decreases"])
-conditions_needed = "\"Monk\""
+conditions_needed = "Monk"
 cond_type_needed = "job_conditions"

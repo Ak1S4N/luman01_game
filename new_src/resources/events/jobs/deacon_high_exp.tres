@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Event" load_steps=3 format=3 uid="uid://dbm7vowkofgln"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_f76a7"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/event.gd" id="2_ot57g"]
+
+[resource]
+script = ExtResource("2_ot57g")
+event_title = "First Time on Service"
+event_description = "First Rodeo! The Priest told you to serve on the next mass, like how you've done it when they were still teaching you.
+
+Of course that's gonna be easy! (you said to yourself)
+
+The mass has started... But you forgot what's the first thing to do on the mass!
+
+You were struck with a decision..."
+has_occured = false
+type = 1
+job_options = Array[ExtResource("1_f76a7")]([])
+value_options = Array[int]([20, -20])
+value_name = Array[String](["Ring the bell", "March to the altar"])
+options_description = Array[String](["No description... You're supposed
+to forget it.", "Nahhh I still won't tell you."])
+conditions_needed = "Deacon"
+cond_type_needed = "job_conditions"

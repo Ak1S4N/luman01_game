@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://new_src/objects/event_scene/event_scene.gd" id="1_jt705"]
 
 [node name="event" type="PanelContainer"]
+self_modulate = Color(0, 0, 0, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=3 uid="uid://dxmbnomyn2365"]
+[gd_scene load_steps=124 format=3 uid="uid://dxmbnomyn2365"]
 
 [ext_resource type="Texture2D" uid="uid://t8vsmkx7xcp" path="res://assets/main/maps/map2.png" id="1_8rker"]
 [ext_resource type="Script" path="res://new_src/world/world.gd" id="1_vqio8"]
@@ -119,6 +119,8 @@
 [ext_resource type="Resource" uid="uid://01sog6nrx6ri" path="res://new_src/resources/events/lost_all_money.tres" id="89_6yi8a"]
 [ext_resource type="Resource" uid="uid://d1iqqscjrqnau" path="res://new_src/resources/events/life_unbegotten.tres" id="90_jvxs4"]
 [ext_resource type="AudioStream" uid="uid://cwd2ocjkfgpa1" path="res://assets/main/music/Echoes in the Castle Halls.mp3" id="98_1lk6w"]
+[ext_resource type="Resource" uid="uid://dbm7vowkofgln" path="res://new_src/resources/events/jobs/deacon_high_exp.tres" id="117_hvk5v"]
+[ext_resource type="Resource" uid="uid://qhnlc7ngnyvd" path="res://new_src/resources/events/jobs/monk_low.tres" id="118_oy3np"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qd8sa"]
 atlas = ExtResource("9_upsjh")
@@ -1611,8 +1613,8 @@ script = ExtResource("61_vnwhq")
 first_event = ExtResource("62_wffkc")
 lost_all_money = ExtResource("89_6yi8a")
 ending = ExtResource("90_jvxs4")
-random_general_event = Array[ExtResource("63_mpann")]([ExtResource("64_bnu8n"), ExtResource("66_subff"), ExtResource("69_vnx21"), ExtResource("70_qvu22")])
-chance = 0.008
+random_general_event = Array[ExtResource("63_mpann")]([ExtResource("64_bnu8n"), ExtResource("66_subff"), ExtResource("69_vnx21"), ExtResource("70_qvu22"), ExtResource("117_hvk5v"), ExtResource("118_oy3np")])
+chance = 0.02
 character_manager = NodePath("../../finance_manager/character_manager")
 finance_manager = NodePath("../../finance_manager")
 world = NodePath("../..")

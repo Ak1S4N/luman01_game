@@ -59,7 +59,7 @@ func give_list(int_name: String):
 
 func job_transfer(job_rsc: Job) -> void:
 	emit_signal("get_job", job_rsc)
-"res://new_src/resources/jobs/monastery/bishop.tres"
+
 
 func save() -> void:
 	for job in refugee_quarters:
