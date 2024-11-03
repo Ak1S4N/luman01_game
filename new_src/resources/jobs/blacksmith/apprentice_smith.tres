@@ -1,18 +1,16 @@
-[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://dinc1napbh2rj"]
+[gd_resource type="Resource" script_class="Job" load_steps=2 format=3 uid="uid://dinc1napbh2rj"]
 
 [ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_27xyj"]
-[ext_resource type="Resource" uid="uid://bub3oexuuwpos" path="res://new_src/resources/jobs/refugee_quarters/beggar.tres" id="1_npcq3"]
 
 [resource]
 script = ExtResource("1_27xyj")
 job_title = "Apprentice Smith"
-salary = 1
+salary = 5
 level = 1
-psi_perle = 0.1
-exp = 1.0
-max_exp = 1.0
-pmei_perle = 0.1
-job_required = ExtResource("1_npcq3")
-jr_level_required = 1
-item_required = 0
-job_condition = 4
+psi_perle = 0.3
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.5
+jr_level_required = 0
+item_required = "Tools"
+title_required = "Title Requirement"

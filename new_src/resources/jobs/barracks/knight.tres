@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://bhji2jcp7vst6"]
+
+[ext_resource type="Resource" uid="uid://ceaxtimouqyaa" path="res://new_src/resources/jobs/barracks/bondsman.tres" id="1_xiqq4"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="2_h8nu0"]
+
+[resource]
+script = ExtResource("2_h8nu0")
+job_title = "Knight"
+salary = 20
+level = 1
+psi_perle = 0.5
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.7
+job_required = ExtResource("1_xiqq4")
+jr_level_required = 5
+item_required = "Stave"
+title_required = "No Requirement"

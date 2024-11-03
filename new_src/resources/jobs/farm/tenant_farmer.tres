@@ -1,16 +1,18 @@
-[gd_resource type="Resource" script_class="Job" load_steps=2 format=3 uid="uid://df2tlkw3ybbi"]
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://df2tlkw3ybbi"]
 
+[ext_resource type="Resource" uid="uid://b0od4oareayoe" path="res://new_src/resources/jobs/farm/apprentice_farmer.tres" id="1_2skn1"]
 [ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_oqfyp"]
 
 [resource]
 script = ExtResource("1_oqfyp")
-job_title = ""
-salary = 1
+job_title = "Tenant Farmer"
+salary = 15
 level = 1
-psi_perle = 1.0
-exp = 1.0
-max_exp = 1.0
-pmei_perle = 1.0
-jr_level_required = 1
-item_required = 0
-job_condition = 12
+psi_perle = 0.4
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.4
+job_required = ExtResource("1_2skn1")
+jr_level_required = 4
+item_required = "No item"
+title_required = "Title Requirement"

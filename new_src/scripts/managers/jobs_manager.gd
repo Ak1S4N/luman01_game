@@ -9,7 +9,6 @@ signal get_job(job)
 @export var fishing_hut: Array[Job]
 @export var guild_hall: Array[Job]
 @export var hunting_lodge: Array[Job]
-@export var lords_hall: Array[Job]
 @export var lumber_mill: Array[Job]
 @export var market: Array[Job]
 @export var masonry: Array[Job]
@@ -35,8 +34,6 @@ func give_list(int_name: String):
 			return guild_hall
 		'hunting_lodge':
 			return hunting_lodge
-		'lords_hall':
-			return lords_hall
 		'lumber_mill':
 			return lumber_mill
 		'market':
@@ -48,11 +45,21 @@ func give_list(int_name: String):
 		'slave_quarters':
 			return slave_quarters
 			
+		'guild_hall':
+			return guild_hall
+		'masonry':
+			return masonry
+		'barracks':
+			return barracks
+		'monastery':
+			return monastery
+		'market':
+			return market
 	
 
 func job_transfer(job_rsc: Job) -> void:
 	emit_signal("get_job", job_rsc)
-
+"res://new_src/resources/jobs/monastery/bishop.tres"
 
 func save() -> void:
 	for job in refugee_quarters:

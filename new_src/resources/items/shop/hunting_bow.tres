@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://lt0sex23vd1u"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/item.gd" id="1_tkxey"]
+
+[resource]
+script = ExtResource("1_tkxey")
+item_name = "Hunting Bow"
+item_description = "Used to unlock more job"
+value = 0.0
+price = 6
+item_type = 0

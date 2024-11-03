@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ConditionsMet" load_steps=2 format=3 uid="uid://dqtlo5exbglmu"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/conditions_met.gd" id="1_mlfdn"]
+
+[resource]
+script = ExtResource("1_mlfdn")
+event_conditions = Array[String]([])
+item_conditions = Array[String]([])
+character_conditions = Array[String]([])

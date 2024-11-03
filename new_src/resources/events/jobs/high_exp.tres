@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Event" load_steps=3 format=3 uid="uid://dbm7vowkofgln"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_5dy6w"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/event.gd" id="2_dnxhb"]
+
+[resource]
+script = ExtResource("2_dnxhb")
+event_title = ""
+event_description = ""
+has_occured = false
+type = 0
+job_options = Array[ExtResource("1_5dy6w")]([])
+value_options = Array[int]([])
+value_name = Array[String]([])
+options_description = Array[String]([])
+conditions_needed = ""
+cond_type_needed = ""

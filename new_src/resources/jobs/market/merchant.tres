@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://cl5eu5e4r5aoh"]
+
+[ext_resource type="Resource" uid="uid://12gh6xso6fbt" path="res://new_src/resources/jobs/market/errand_runner.tres" id="1_kit5x"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="2_qyybj"]
+
+[resource]
+script = ExtResource("2_qyybj")
+job_title = "Apprentice Merchant"
+salary = 8
+level = 1
+psi_perle = 0.4
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.3
+job_required = ExtResource("1_kit5x")
+jr_level_required = 2
+item_required = "No item"
+title_required = "Title Requirement"

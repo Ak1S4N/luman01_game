@@ -1,18 +1,16 @@
-[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://bu1ciia0hao5"]
+[gd_resource type="Resource" script_class="Job" load_steps=2 format=3 uid="uid://bu1ciia0hao5"]
 
-[ext_resource type="Resource" uid="uid://bub3oexuuwpos" path="res://new_src/resources/jobs/refugee_quarters/beggar.tres" id="1_15bue"]
 [ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_ob6ua"]
 
 [resource]
 script = ExtResource("1_ob6ua")
-job_title = ""
-salary = 1
+job_title = "Farmhand"
+salary = 5
 level = 1
-psi_perle = 1.0
-exp = 1.0
-max_exp = 1.0
-pmei_perle = 1.0
-job_required = ExtResource("1_15bue")
-jr_level_required = 1
-item_required = 0
-job_condition = 9
+psi_perle = 0.3
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.3
+jr_level_required = 0
+item_required = "No item"
+title_required = "Title Requirement"

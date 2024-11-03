@@ -6,13 +6,13 @@
 [resource]
 script = ExtResource("1_k8swk")
 job_title = "Lumberyard Manager"
-salary = 310
+salary = 23
 level = 1
-psi_perle = 0.18
+psi_perle = 0.7
 exp = 0.0
-max_exp = 160.0
-pmei_perle = 0.2
+max_exp = 100.0
+pmei_perle = 0.5
 job_required = ExtResource("1_e7h5g")
 jr_level_required = 5
-item_required = 0
-job_condition = 23
+item_required = "Tools"
+title_required = "Title Requirement"

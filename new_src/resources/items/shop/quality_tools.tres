@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://yf1rt4jrg6j6"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/item.gd" id="1_1lh3t"]
+
+[resource]
+script = ExtResource("1_1lh3t")
+item_name = "Quality Tools"
+item_description = "This won't break. EVER.
+Gain more Job EXP"
+value = 9.0
+price = 9
+item_type = 0

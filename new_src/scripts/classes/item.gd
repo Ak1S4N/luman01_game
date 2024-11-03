@@ -5,4 +5,4 @@ class_name Item
 @export_multiline var item_description: String
 @export var value: float
 @export var price: int
-@export_enum("job_multiplier", "skill_multiplier") var item_type: int
+@export_enum("job_multiplier", "skill_multiplier", "Lords_title") var item_type: int

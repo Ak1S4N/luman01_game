@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://cj4bys1qpiffu"]
+
+[ext_resource type="Resource" uid="uid://0yqup72bgyix" path="res://new_src/resources/jobs/market/guild_member.tres" id="1_ibv10"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="2_ddex3"]
+
+[resource]
+script = ExtResource("2_ddex3")
+job_title = "Guild Master"
+salary = 28
+level = 1
+psi_perle = 0.7
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.5
+job_required = ExtResource("1_ibv10")
+jr_level_required = 5
+item_required = "No item"
+title_required = "Title Requirement"

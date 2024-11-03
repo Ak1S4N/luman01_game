@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://08xrsaexoq3q"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/item.gd" id="1_5yrsg"]
+
+[resource]
+script = ExtResource("1_5yrsg")
+item_name = "Common Food"
+item_description = "Food for the middle-class people"
+value = 2.0
+price = 2
+item_type = 0

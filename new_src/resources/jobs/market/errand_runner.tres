@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Job" load_steps=2 format=3 uid="uid://12gh6xso6fbt"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_e3jfu"]
+
+[resource]
+script = ExtResource("1_e3jfu")
+job_title = "Errand Runner"
+salary = 5
+level = 1
+psi_perle = 0.3
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.3
+jr_level_required = 0
+item_required = "No item"
+title_required = "Title Requirement"

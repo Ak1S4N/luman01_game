@@ -1,16 +1,18 @@
-[gd_resource type="Resource" script_class="Job" load_steps=2 format=3 uid="uid://binrkre0qm0mj"]
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://binrkre0qm0mj"]
 
+[ext_resource type="Resource" uid="uid://f06us4riorvd" path="res://new_src/resources/jobs/refugee_quarters/labor_helper.tres" id="1_8gp2y"]
 [ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_iek2y"]
 
 [resource]
 script = ExtResource("1_iek2y")
-job_title = "market helper"
-salary = 1
+job_title = "Market Helper"
+salary = 3
 level = 1
-psi_perle = 1.0
-exp = 1.0
-max_exp = 1.0
-pmei_perle = 1.0
-jr_level_required = 1
-item_required = 0
-job_condition = 3
+psi_perle = 0.4
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.3
+job_required = ExtResource("1_8gp2y")
+jr_level_required = 5
+item_required = "No item"
+title_required = "No Requirement"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://c8uffc7dl041l"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/item.gd" id="1_pqbwr"]
+
+[resource]
+script = ExtResource("1_pqbwr")
+item_name = "Tools"
+item_description = "Required for some jobs."
+value = 0.0
+price = 2
+item_type = 0

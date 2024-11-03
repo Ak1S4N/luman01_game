@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Event" load_steps=3 format=3 uid="uid://d1iqqscjrqnau"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_0xrte"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/event.gd" id="2_sg5qs"]
+
+[resource]
+script = ExtResource("2_sg5qs")
+event_title = "Your Life Shall Unbegotten"
+event_description = "You've finally breathed your last breath, and in mere seconds - you wonder whether your life has been worth it.
+
+Did you earn the sunset enough?
+
+Your child watches you as you go, crying...
+
+You have no other decisions.
+
+(NOTE: IF REINCARNATED, ALL JOB LEVELS WILL STAY)"
+has_occured = false
+type = 2
+job_options = Array[ExtResource("1_0xrte")]([])
+value_options = Array[int]([])
+value_name = Array[String](["Reincarnate"])
+options_description = Array[String](["It's kinda like...
+You become your child."])
+conditions_needed = ""
+cond_type_needed = ""

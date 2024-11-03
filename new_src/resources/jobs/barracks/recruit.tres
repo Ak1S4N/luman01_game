@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Job" load_steps=2 format=3 uid="uid://bk4ey0sj8yhqo"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_p782s"]
+
+[resource]
+script = ExtResource("1_p782s")
+job_title = "Recruit"
+salary = 5
+level = 1
+psi_perle = 0.3
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.3
+jr_level_required = 0
+item_required = "Stave"
+title_required = "No Requirement"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://dw6etr71w25xn"]
+
+[ext_resource type="Resource" uid="uid://bmoy4cu4fikto" path="res://new_src/resources/jobs/monastery/priest.tres" id="1_vb5to"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="2_tn8xy"]
+
+[resource]
+script = ExtResource("2_tn8xy")
+job_title = "Bishop"
+salary = 12
+level = 1
+psi_perle = 0.7
+exp = 0.0
+max_exp = 50.0
+pmei_perle = 0.2
+job_required = ExtResource("1_vb5to")
+jr_level_required = 8
+item_required = "No item"
+title_required = "No Requirement"

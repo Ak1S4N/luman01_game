@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://batt7eiben7b5"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/item.gd" id="1_k6u1i"]
+
+[resource]
+script = ExtResource("1_k6u1i")
+item_name = "Good Food"
+item_description = "Food for the up-mid-class.
+Gain more Skill EXP boost."
+value = 2.0
+price = 4
+item_type = 1

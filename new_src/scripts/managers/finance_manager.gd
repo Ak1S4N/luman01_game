@@ -2,14 +2,15 @@ extends Managers
 class_name FinanceManager
 
 var income: int
-var expenses: int
+var total_expenses: int
 var wallet: int = 0
 
 @export var current_job: Job
 @export var character_manager: CharacterManager
 @export var job_manager: Managers
+@export var event_manager: EventManager
 
-var _CONDITIONS_MET = preload("res://new_src/resources/conditions_met/ ConditionsMet.tres")
+var _CONDITIONS_MET = preload("res://new_src/resources/conditions_met/ConditionsMet.tres")
 
 func _ready() -> void:
 	if job_manager:
@@ -28,7 +29,9 @@ func _on_timer_timeout() -> void:
 		if character_manager.current_items:
 			for i in character_manager.current_items:
 				if i.price:
-					wallet -= i.price
+					var expense = i.price
+					wallet -= expense
+				
 		
 		
 		if current_job.exp >= current_job.max_exp:
@@ -41,7 +44,9 @@ func _on_timer_timeout() -> void:
 			current_job.exp = 0
 	
 	if wallet <= 0:
+		event_manager.back_to_zero()
 		wallet = 0
+		total_expenses = 0
 	
 
 func job_transfer(job_rsc: Job) -> void:
@@ -55,12 +60,20 @@ func job_transfer(job_rsc: Job) -> void:
 func add_exp(value: int) -> void:
 	current_job.exp += value
 
+func add_to_total_expenses(value: int) -> void:
+	total_expenses += value
+
+func new_character() -> void:
+	wallet = 1
+
+
 
 func save() -> void:
 	var character_name = "player"
 	var character_data: Dictionary = {
 		"current_job": current_job,
 		"wallet": wallet,
+		"name": character_manager.player_name,
 		"age": character_manager.age,
 		"day": character_manager.day
 		}
@@ -69,7 +82,6 @@ func save() -> void:
 	
 
 func load_data() -> void:
-	var data_dict: Dictionary = SaveLoad.load_data("player", ["current_job", "wallet"])
+	var data_dict: Dictionary = SaveLoad.load_data("player", ["current_job", "wallet", "name", "age", "day"])
 	current_job = data_dict.get("current_job")
 	wallet = data_dict.get("wallet")
-	

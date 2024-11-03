@@ -1,16 +1,18 @@
-[gd_resource type="Resource" script_class="Job" load_steps=2 format=3 uid="uid://cj1i1xchnb3ds"]
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://cj1i1xchnb3ds"]
 
 [ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_77smd"]
+[ext_resource type="Resource" uid="uid://rv5sjaqr7gns" path="res://new_src/resources/jobs/hunting_lodge/trapper.tres" id="1_ofevl"]
 
 [resource]
 script = ExtResource("1_77smd")
-job_title = ""
-salary = 0
-level = 0
-psi_perle = 0.0
+job_title = "Hunter"
+salary = 14
+level = 1
+psi_perle = 0.45
 exp = 0.0
-max_exp = 0.0
-pmei_perle = 0.0
-jr_level_required = 0
-item_required = 0
-job_condition = 18
+max_exp = 100.0
+pmei_perle = 0.3
+job_required = ExtResource("1_ofevl")
+jr_level_required = 3
+item_required = "Sling"
+title_required = "No Requirement"

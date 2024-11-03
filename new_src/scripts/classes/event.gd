@@ -6,7 +6,7 @@ class_name Event
 
 @export var has_occured: bool = false
 
-@export_enum("gives_job", "gives_value") var type: int
+@export_enum("gives_job", "gives_value", "death", "lost_all_money") var type: int
 
 #leave variables below empty if event type not applicable
 @export var job_options: Array[Job]

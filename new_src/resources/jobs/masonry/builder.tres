@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://dyc8qde6s8ob0"]
+
+[ext_resource type="Resource" uid="uid://i3nowc8vnvq0" path="res://new_src/resources/jobs/masonry/brickmaker.tres" id="1_5hvjj"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_ssb6i"]
+
+[resource]
+script = ExtResource("1_ssb6i")
+job_title = "Builder"
+salary = 9
+level = 1
+psi_perle = 0.45
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.3
+job_required = ExtResource("1_5hvjj")
+jr_level_required = 3
+item_required = "No item"
+title_required = "Title Requirement"

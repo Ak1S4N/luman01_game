@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://7y7ofbit5gyo"]
+
+[ext_resource type="Resource" uid="uid://xbygbvqb7pn1" path="res://new_src/resources/jobs/barracks/squire.tres" id="1_elfxl"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="2_o7fni"]
+
+[resource]
+script = ExtResource("2_o7fni")
+job_title = "Scout"
+salary = 10
+level = 1
+psi_perle = 0.5
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.3
+job_required = ExtResource("1_elfxl")
+jr_level_required = 10
+item_required = "Stave"
+title_required = "No Requirement"

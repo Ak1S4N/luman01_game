@@ -6,13 +6,13 @@
 [resource]
 script = ExtResource("1_fyndv")
 job_title = "Oak Feller"
-salary = 180
+salary = 14
 level = 1
-psi_perle = 0.15
+psi_perle = 0.45
 exp = 0.0
 max_exp = 100.0
-pmei_perle = 0.15
+pmei_perle = 0.25
 job_required = ExtResource("1_jgo24")
-jr_level_required = 4
-item_required = 0
-job_condition = 24
+jr_level_required = 5
+item_required = "Sling"
+title_required = "Title Requirement"

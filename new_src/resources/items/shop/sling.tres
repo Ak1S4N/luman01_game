@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://1oyyklnoogig"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/item.gd" id="1_xn31b"]
+
+[resource]
+script = ExtResource("1_xn31b")
+item_name = "Sling"
+item_description = "Used to unlock some jobs."
+value = 2.0
+price = 3
+item_type = 0

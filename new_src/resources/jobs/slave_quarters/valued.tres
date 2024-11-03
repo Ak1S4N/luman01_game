@@ -1,16 +1,18 @@
-[gd_resource type="Resource" script_class="Job" load_steps=2 format=3 uid="uid://boc1qd8dynrxl"]
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://boc1qd8dynrxl"]
 
+[ext_resource type="Resource" uid="uid://da6gmo1xmdbkd" path="res://new_src/resources/jobs/slave_quarters/lowly.tres" id="1_0yrxr"]
 [ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_mayew"]
 
 [resource]
 script = ExtResource("1_mayew")
-job_title = ""
-salary = 0
-level = 0
-psi_perle = 0.0
+job_title = "Valuable Slave"
+salary = 3
+level = 1
+psi_perle = 0.4
 exp = 0.0
-max_exp = 0.0
-pmei_perle = 0.0
-jr_level_required = 0
-item_required = 0
-job_condition = 3
+max_exp = 100.0
+pmei_perle = 0.3
+job_required = ExtResource("1_0yrxr")
+jr_level_required = 5
+item_required = "No item"
+title_required = "No Requirement"

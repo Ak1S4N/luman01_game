@@ -4,13 +4,13 @@
 
 [resource]
 script = ExtResource("1_wfpw7")
-job_title = ""
-salary = 0
-level = 0
-psi_perle = 0.0
+job_title = "Wanderer"
+salary = 5
+level = 1
+psi_perle = 0.3
 exp = 0.0
-max_exp = 0.0
-pmei_perle = 0.0
+max_exp = 100.0
+pmei_perle = 0.3
 jr_level_required = 0
-item_required = 0
-job_condition = 21
+item_required = "Sling"
+title_required = "No Requirement"

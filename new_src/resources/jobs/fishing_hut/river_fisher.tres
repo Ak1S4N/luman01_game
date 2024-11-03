@@ -1,16 +1,18 @@
-[gd_resource type="Resource" script_class="Job" load_steps=2 format=3 uid="uid://caij7w7gnv8ib"]
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://caij7w7gnv8ib"]
 
 [ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_8sig7"]
+[ext_resource type="Resource" uid="uid://csvirg2fr7q46" path="res://new_src/resources/jobs/fishing_hut/crab_trapper.tres" id="1_aw06u"]
 
 [resource]
 script = ExtResource("1_8sig7")
-job_title = ""
-salary = 0
-level = 0
-psi_perle = 0.0
+job_title = "River Fisher"
+salary = 10
+level = 1
+psi_perle = 0.4
 exp = 0.0
-max_exp = 0.0
-pmei_perle = 0.0
-jr_level_required = 0
-item_required = 0
-job_condition = 17
+max_exp = 100.0
+pmei_perle = 0.3
+job_required = ExtResource("1_aw06u")
+jr_level_required = 3
+item_required = "Tools"
+title_required = "No Requirement"

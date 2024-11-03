@@ -6,13 +6,13 @@
 [resource]
 script = ExtResource("1_ci7bb")
 job_title = "Sapling Collector"
-salary = 90
+salary = 9
 level = 1
-psi_perle = 0.1
+psi_perle = 0.45
 exp = 0.0
-max_exp = 120.0
-pmei_perle = 0.12
+max_exp = 100.0
+pmei_perle = 0.3
 job_required = ExtResource("1_5p7e6")
 jr_level_required = 3
-item_required = 0
-job_condition = 25
+item_required = "Tools"
+title_required = "Title Requirement"

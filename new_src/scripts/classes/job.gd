@@ -13,4 +13,5 @@ class_name Job
 #This below section is now for 'requirements'
 @export var job_required: Job
 @export var jr_level_required: int #JR is Job Required
-@export_enum('None', 'Tools', 'Stave', 'Sling') var item_required: int
+@export_enum('No item', 'Tools', 'Stave', 'Sling') var item_required: String = 'No item'
+@export_enum('No Requirement', 'Title Requirement') var title_required: String = 'Title Requirement'

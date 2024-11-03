@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Event" load_steps=3 format=3 uid="uid://bm1w46jmdxe5i"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_hp32f"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/event.gd" id="2_owlmu"]
+
+[resource]
+script = ExtResource("2_owlmu")
+event_title = "Ouch!"
+event_description = "As you were beggin to people at the streets, a wealthy man approached you with disgust.
+
+You tried your best to approach him and beg for a quarter...
+
+You got pushed into the ground instead,
+
+You were struck with a decision"
+has_occured = false
+type = 1
+job_options = Array[ExtResource("1_hp32f")]([])
+value_options = Array[int]([20, 10])
+value_name = Array[String](["Push him back", "Run away"])
+options_description = Array[String](["Increases Job Exp by 20", "Increases Job Exp by 10"])
+conditions_needed = "Beggar"
+cond_type_needed = "job_conditions"

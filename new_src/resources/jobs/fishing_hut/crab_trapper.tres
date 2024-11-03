@@ -1,16 +1,18 @@
-[gd_resource type="Resource" script_class="Job" load_steps=2 format=3 uid="uid://csvirg2fr7q46"]
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://csvirg2fr7q46"]
 
+[ext_resource type="Resource" uid="uid://brysxo7trvv7t" path="res://new_src/resources/jobs/fishing_hut/net_mender.tres" id="1_avyrw"]
 [ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="1_ksakm"]
 
 [resource]
 script = ExtResource("1_ksakm")
 job_title = "Crab Trapper"
-salary = 3
+salary = 7
 level = 1
-psi_perle = 0.02
+psi_perle = 0.6
 exp = 0.0
 max_exp = 100.0
-pmei_perle = 0.2
-jr_level_required = 0
-item_required = 0
-job_condition = 14
+pmei_perle = 0.6
+job_required = ExtResource("1_avyrw")
+jr_level_required = 3
+item_required = "Tools"
+title_required = "No Requirement"

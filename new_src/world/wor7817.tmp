@@ -1,0 +1,1734 @@
+[gd_scene load_steps=100 format=3 uid="uid://dxmbnomyn2365"]
+
+[ext_resource type="Texture2D" uid="uid://t8vsmkx7xcp" path="res://assets/main/maps/map2.png" id="1_8rker"]
+[ext_resource type="Script" path="res://new_src/world/world.gd" id="1_vqio8"]
+[ext_resource type="Texture2D" uid="uid://dut84xddry02n" path="res://assets/main/maps/map1.png" id="2_bqvhq"]
+[ext_resource type="Resource" uid="uid://bub3oexuuwpos" path="res://new_src/resources/jobs/refugee_quarters/beggar.tres" id="2_stgm5"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/finance_manager.gd" id="3_mbe7k"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/character_manager.gd" id="4_l53j5"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/UI_manager.gd" id="5_cneqf"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/area_manager.gd" id="6_i2gso"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/jobs_manager.gd" id="8_jero7"]
+[ext_resource type="Texture2D" uid="uid://cjurqruqb6bqk" path="res://assets/main/buildings/lumber_mill/lumber_mill_clicked.png" id="9_r1y5i"]
+[ext_resource type="Texture2D" uid="uid://b4ukpt2tbjq18" path="res://assets/main/character_portrait/character_portraits.png" id="9_upsjh"]
+[ext_resource type="Texture2D" uid="uid://bwf34o84u8y2d" path="res://assets/main/buildings/lumber_mill/lumber_mill_highlight.png" id="10_ctf6i"]
+[ext_resource type="Texture2D" uid="uid://bilo35ew7aomf" path="res://assets/main/buildings/blacksmith/blacksmith_clicked.png" id="12_xbmph"]
+[ext_resource type="Texture2D" uid="uid://bvg3fjmirup72" path="res://assets/main/buildings/blacksmith/blacksmith_highlight.png" id="13_dw1md"]
+[ext_resource type="Texture2D" uid="uid://c58yipdmh1t6k" path="res://assets/main/buildings/fishing_hut/fishing_hut_clicked.png" id="15_5tg0b"]
+[ext_resource type="Texture2D" uid="uid://bgm2bxa1ttln0" path="res://assets/main/buildings/slave_quarters/slave_quarters_clicked.png" id="16_8sws3"]
+[ext_resource type="Texture2D" uid="uid://b2f3pm6ndeeyd" path="res://assets/main/buildings/fishing_hut/fishing_hut_highlight.png" id="16_us02v"]
+[ext_resource type="Texture2D" uid="uid://bn4fg300r58o4" path="res://assets/main/buildings/hunting_lodge/hunting_lodge_clicked.png" id="17_b7p8k"]
+[ext_resource type="Texture2D" uid="uid://cbdip0hgog6xa" path="res://assets/main/buildings/slave_quarters/slave_quarters_highlight.png" id="17_l24xb"]
+[ext_resource type="Texture2D" uid="uid://vft4h30iixpy" path="res://assets/main/buildings/hunting_lodge/hunting_lodge_highlight.png" id="18_ospi1"]
+[ext_resource type="Texture2D" uid="uid://fekyokcd032s" path="res://assets/main/buildings/farm/farm_clicked.png" id="18_q3kwa"]
+[ext_resource type="Texture2D" uid="uid://bovnc75af86qb" path="res://assets/main/buildings/farm/farm_highlighted.png" id="19_3puf4"]
+[ext_resource type="Texture2D" uid="uid://cpho6nlf3ruk7" path="res://assets/main/buildings/refugee_quarters/refugee_quarters_clicked.png" id="20_8de41"]
+[ext_resource type="Texture2D" uid="uid://cuekg7hro07qv" path="res://assets/main/buildings/refugee_quarters/refugee_quarters_highlight.png" id="21_mdg5e"]
+[ext_resource type="Texture2D" uid="uid://bjsagwxgc670j" path="res://assets/main/map_buttons/next_map_sign_R_CLICKED.png" id="22_2b3b0"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/interior_manager.gd" id="22_awh0r"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="23_2gtsp"]
+[ext_resource type="Texture2D" uid="uid://bvuodkfd44c8l" path="res://assets/main/map_buttons/next_map_sign_R_HIGHLIGHT.png" id="23_ksy0j"]
+[ext_resource type="Resource" uid="uid://dinc1napbh2rj" path="res://new_src/resources/jobs/blacksmith/apprentice_smith.tres" id="24_eqfgu"]
+[ext_resource type="Texture2D" uid="uid://b2g4pniiiwkv" path="res://assets/main/buildings/lords_hall/lords_hall_clicked.png" id="24_rthkq"]
+[ext_resource type="Resource" uid="uid://doghch0e14t6y" path="res://new_src/resources/jobs/blacksmith/journeyman.tres" id="25_a7u4e"]
+[ext_resource type="Texture2D" uid="uid://dxxum6f8s8y40" path="res://assets/main/buildings/lords_hall/lords_hall_highlight.png" id="25_dvkym"]
+[ext_resource type="Resource" uid="uid://doj1dlyhym8f8" path="res://new_src/resources/jobs/blacksmith/smith.tres" id="26_hn8ab"]
+[ext_resource type="Resource" uid="uid://ceujsdngt406h" path="res://new_src/resources/jobs/blacksmith/master_smith.tres" id="27_4kjbs"]
+[ext_resource type="Texture2D" uid="uid://dgfa8fmmv8vhv" path="res://assets/main/buildings/guild_hall/guild_hall_clicked.png" id="27_twji7"]
+[ext_resource type="Resource" uid="uid://bu1ciia0hao5" path="res://new_src/resources/jobs/farm/farmhand.tres" id="28_skiny"]
+[ext_resource type="Texture2D" uid="uid://b6io30fmpppt0" path="res://assets/main/buildings/guild_hall/guild_hall_highlight.png" id="28_t68bh"]
+[ext_resource type="Texture2D" uid="uid://byiircoy1rdm8" path="res://assets/main/buildings/masonry/masonry_clicked.png" id="29_ay2tk"]
+[ext_resource type="Resource" uid="uid://dg32dw5arphqr" path="res://new_src/resources/jobs/farm/stablehand.tres" id="29_wgkoa"]
+[ext_resource type="Resource" uid="uid://b0od4oareayoe" path="res://new_src/resources/jobs/farm/apprentice_farmer.tres" id="30_0kn4y"]
+[ext_resource type="Texture2D" uid="uid://c3vyy3t0h5jjj" path="res://assets/main/buildings/masonry/masonry_highlight.png" id="30_dr370"]
+[ext_resource type="Texture2D" uid="uid://dlvdn6li2tdup" path="res://assets/main/buildings/barracks/barracks_clicked.png" id="30_ervfa"]
+[ext_resource type="Script" path="res://new_src/objects/all_interiors/refugee_quarters.gd" id="30_esw1a"]
+[ext_resource type="Resource" uid="uid://df2tlkw3ybbi" path="res://new_src/resources/jobs/farm/tenant_farmer.tres" id="31_5qj6i"]
+[ext_resource type="Texture2D" uid="uid://bk370ordb5ubv" path="res://assets/main/buildings/barracks/barracks_hovered.png" id="31_6aa2x"]
+[ext_resource type="Resource" uid="uid://nk1jfv27xvw" path="res://new_src/resources/jobs/farm/freeholder.tres" id="32_nj6db"]
+[ext_resource type="Texture2D" uid="uid://dxcwosc0kfd2d" path="res://assets/main/buildings/monastery/monastery_clicked.png" id="32_nj7pd"]
+[ext_resource type="Texture2D" uid="uid://40m5357q36ow" path="res://assets/main/buildings/monastery/monastery_highlight.png" id="33_s0gv7"]
+[ext_resource type="Resource" uid="uid://brysxo7trvv7t" path="res://new_src/resources/jobs/fishing_hut/net_mender.tres" id="33_udl86"]
+[ext_resource type="Resource" uid="uid://csvirg2fr7q46" path="res://new_src/resources/jobs/fishing_hut/crab_trapper.tres" id="34_mpnfl"]
+[ext_resource type="Resource" uid="uid://caij7w7gnv8ib" path="res://new_src/resources/jobs/fishing_hut/river_fisher.tres" id="35_b64ml"]
+[ext_resource type="Texture2D" uid="uid://bsycoqmowpmwu" path="res://assets/main/buildings/market/market_clicked.png" id="35_x1pqe"]
+[ext_resource type="Texture2D" uid="uid://cjmuucpwfclhm" path="res://assets/main/buildings/market/market_highlight.png" id="36_7w4go"]
+[ext_resource type="Texture2D" uid="uid://bj4pf08ynxfqb" path="res://assets/main/map_buttons/next_map_sign_L_CLICKED.png" id="36_jerls"]
+[ext_resource type="Resource" uid="uid://bigpfs1x815xg" path="res://new_src/resources/jobs/fishing_hut/pier_fisher.tres" id="36_qqjdh"]
+[ext_resource type="Resource" uid="uid://dptl42tcltgoc" path="res://new_src/resources/jobs/fishing_hut/boat_fisher.tres" id="37_upmdq"]
+[ext_resource type="Texture2D" uid="uid://7pfrb6tqlxx2" path="res://assets/main/map_buttons/next_map_sign_L_HIGHLIGHTED.png" id="37_vm353"]
+[ext_resource type="Resource" uid="uid://qfcqajj78sp8" path="res://new_src/resources/jobs/hunting_lodge/wanderer.tres" id="38_aocma"]
+[ext_resource type="Resource" uid="uid://rv5sjaqr7gns" path="res://new_src/resources/jobs/hunting_lodge/trapper.tres" id="39_7kvsa"]
+[ext_resource type="Resource" uid="uid://cj1i1xchnb3ds" path="res://new_src/resources/jobs/hunting_lodge/hunter.tres" id="40_ud4s0"]
+[ext_resource type="Resource" uid="uid://ci0vaobnns1if" path="res://new_src/resources/jobs/hunting_lodge/ranger.tres" id="41_g3j8u"]
+[ext_resource type="Resource" uid="uid://c6dfef6ubyorr" path="res://new_src/resources/jobs/lumber_mill/kindler_collerctor.tres" id="42_4roej"]
+[ext_resource type="Resource" uid="uid://cob3b16wbgt3e" path="res://new_src/resources/jobs/lumber_mill/sapling_collector.tres" id="43_jraqy"]
+[ext_resource type="Resource" uid="uid://c1pq45o2nagqv" path="res://new_src/resources/jobs/lumber_mill/oak_feller.tres" id="44_bm6hj"]
+[ext_resource type="Resource" uid="uid://cx0xuv8l35h02" path="res://new_src/resources/jobs/lumber_mill/lumberyard_manager.tres" id="45_6kfhy"]
+[ext_resource type="Resource" uid="uid://f06us4riorvd" path="res://new_src/resources/jobs/refugee_quarters/labor_helper.tres" id="46_b6nln"]
+[ext_resource type="Resource" uid="uid://binrkre0qm0mj" path="res://new_src/resources/jobs/refugee_quarters/market_helper.tres" id="47_u50n8"]
+[ext_resource type="Resource" uid="uid://biplfjbbnmgst" path="res://new_src/resources/jobs/slave_quarters/fresh.tres" id="48_amx4i"]
+[ext_resource type="Resource" uid="uid://da6gmo1xmdbkd" path="res://new_src/resources/jobs/slave_quarters/lowly.tres" id="49_2kcva"]
+[ext_resource type="Resource" uid="uid://boc1qd8dynrxl" path="res://new_src/resources/jobs/slave_quarters/valued.tres" id="50_oca5b"]
+[ext_resource type="Script" path="res://new_src/world/paused_menu.gd" id="61_aif7j"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/shop_UI_manager.gd" id="61_uotj2"]
+[ext_resource type="Script" path="res://new_src/scripts/managers/event_manager.gd" id="61_vnwhq"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/item.gd" id="62_1s0k7"]
+[ext_resource type="Resource" uid="uid://207jv80y07uc" path="res://new_src/resources/events/test_event.tres" id="62_wffkc"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/event.gd" id="63_mpann"]
+[ext_resource type="Resource" uid="uid://8ue21ohmo2ue" path="res://new_src/resources/items/shop/poor_food.tres" id="63_oqmnu"]
+[ext_resource type="Resource" uid="uid://b5kik6x0sjoa" path="res://new_src/resources/events/higher_exp.tres" id="64_bnu8n"]
+[ext_resource type="Resource" uid="uid://08xrsaexoq3q" path="res://new_src/resources/items/shop/common_food.tres" id="64_hsvu1"]
+[ext_resource type="Resource" uid="uid://batt7eiben7b5" path="res://new_src/resources/items/shop/good_food.tres" id="65_krsd0"]
+[ext_resource type="Resource" uid="uid://cedtcvlwf17k2" path="res://new_src/resources/events/random_job.tres" id="65_ueop6"]
+[ext_resource type="Resource" uid="uid://baep6chfbss2i" path="res://new_src/resources/items/shop/rich_food.tres" id="66_nb7mb"]
+[ext_resource type="Resource" uid="uid://dvcbmbn2nrsj8" path="res://new_src/resources/events/low_exp.tres" id="66_subff"]
+[ext_resource type="Resource" uid="uid://1oyyklnoogig" path="res://new_src/resources/items/shop/sling.tres" id="67_cdsm3"]
+[ext_resource type="Resource" uid="uid://bkl7ygmo8y0g0" path="res://new_src/resources/events/more_jobs.tres" id="68_7b4v1"]
+[ext_resource type="Resource" uid="uid://lt0sex23vd1u" path="res://new_src/resources/items/shop/hunting_bow.tres" id="68_rnv7y"]
+[ext_resource type="Resource" uid="uid://c7lsof7nky7qk" path="res://new_src/resources/items/shop/longbow.tres" id="69_b42wf"]
+[ext_resource type="Resource" uid="uid://15bjfuh0qo3i" path="res://new_src/resources/events/high_exp_crab_trapper.tres" id="69_vnx21"]
+[ext_resource type="Resource" uid="uid://bm1w46jmdxe5i" path="res://new_src/resources/events/exp_beggar.tres" id="70_qvu22"]
+[ext_resource type="Resource" uid="uid://dnhcdpppduta6" path="res://new_src/resources/items/shop/stave.tres" id="70_sbx07"]
+[ext_resource type="Resource" uid="uid://glofnigrkdsr" path="res://new_src/resources/items/shop/mace.tres" id="71_fo86l"]
+[ext_resource type="Script" path="res://new_src/world/hover_select.gd" id="72_mtdvr"]
+[ext_resource type="Resource" uid="uid://bxwqdjo8beaij" path="res://new_src/resources/items/shop/spear.tres" id="72_shprd"]
+[ext_resource type="Resource" uid="uid://cywn3ag872rmw" path="res://new_src/resources/items/shop/sword.tres" id="73_2lww5"]
+[ext_resource type="Resource" uid="uid://c8uffc7dl041l" path="res://new_src/resources/items/shop/tools.tres" id="74_p100h"]
+[ext_resource type="Resource" uid="uid://yf1rt4jrg6j6" path="res://new_src/resources/items/shop/quality_tools.tres" id="75_hym0n"]
+[ext_resource type="Resource" uid="uid://bl678jcap54qd" path="res://new_src/resources/items/shop/craftsman_tools.tres" id="76_nruo0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd8sa"]
+atlas = ExtResource("9_upsjh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iuu6w"]
+font_size = 12
+font_color = Color(1, 1, 1, 0.690196)
+
+[node name="world" type="Node2D" node_paths=PackedStringArray("area_manager")]
+script = ExtResource("1_vqio8")
+area_manager = NodePath("CanvasLayer/area_manager")
+
+[node name="finance_manager" type="Node" parent="." node_paths=PackedStringArray("character_manager", "job_manager")]
+script = ExtResource("3_mbe7k")
+current_job = ExtResource("2_stgm5")
+character_manager = NodePath("character_manager")
+job_manager = NodePath("../CanvasLayer/job_manager")
+
+[node name="character_manager" type="Node" parent="finance_manager" node_paths=PackedStringArray("finance_manager")]
+script = ExtResource("4_l53j5")
+finance_manager = NodePath("..")
+
+[node name="Timer" type="Timer" parent="finance_manager"]
+wait_time = 0.1
+autostart = true
+
+[node name="panorama" type="Node2D" parent="."]
+
+[node name="Map1" type="Sprite2D" parent="panorama"]
+texture_filter = 1
+position = Vector2(639.8, 360)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("2_bqvhq")
+
+[node name="Map2" type="Sprite2D" parent="panorama"]
+texture_filter = 1
+position = Vector2(-641.2, 360)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("1_8rker")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="area_manager" type="Node" parent="CanvasLayer" node_paths=PackedStringArray("interior_manager")]
+script = ExtResource("6_i2gso")
+interior_manager = NodePath("../interior_manager")
+
+[node name="buildings" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="map1" type="Control" parent="CanvasLayer/buildings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="lumber_mill" type="TextureButton" parent="CanvasLayer/buildings/map1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 193.0
+offset_top = 221.0
+offset_right = 270.0
+offset_bottom = 261.0
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("9_r1y5i")
+texture_hover = ExtResource("10_ctf6i")
+
+[node name="blacksmith" type="TextureButton" parent="CanvasLayer/buildings/map1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 400.0
+offset_top = 247.0
+offset_right = 490.0
+offset_bottom = 302.0
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("12_xbmph")
+texture_hover = ExtResource("13_dw1md")
+
+[node name="farm" type="TextureButton" parent="CanvasLayer/buildings/map1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -267.0
+offset_top = 535.0
+offset_right = -215.0
+offset_bottom = 574.0
+grow_horizontal = 2
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("18_q3kwa")
+texture_hover = ExtResource("19_3puf4")
+
+[node name="fishing_hut" type="TextureButton" parent="CanvasLayer/buildings/map1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 62.0
+offset_top = 154.0
+offset_right = 95.0
+offset_bottom = 200.0
+grow_horizontal = 2
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("15_5tg0b")
+texture_hover = ExtResource("16_us02v")
+
+[node name="hunting_lodge" type="TextureButton" parent="CanvasLayer/buildings/map1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -248.0
+offset_top = 382.0
+offset_right = -207.0
+offset_bottom = 428.0
+grow_horizontal = 2
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("17_b7p8k")
+texture_hover = ExtResource("18_ospi1")
+
+[node name="slave_quarters" type="TextureButton" parent="CanvasLayer/buildings/map1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -528.0
+offset_top = 319.0
+offset_right = -487.0
+offset_bottom = 376.0
+grow_horizontal = 2
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("16_8sws3")
+texture_hover = ExtResource("17_l24xb")
+
+[node name="refugee_quarters" type="TextureButton" parent="CanvasLayer/buildings/map1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -521.0
+offset_top = 501.0
+offset_right = -467.0
+offset_bottom = 539.0
+grow_horizontal = 2
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("20_8de41")
+texture_hover = ExtResource("21_mdg5e")
+
+[node name="next_map" type="TextureButton" parent="CanvasLayer/buildings/map1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 209.0
+offset_top = 312.0
+offset_right = 224.0
+offset_bottom = 327.0
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("22_2b3b0")
+texture_hover = ExtResource("23_ksy0j")
+
+[node name="map2" type="Control" parent="CanvasLayer/buildings"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="lords_hall" type="TextureButton" parent="CanvasLayer/buildings/map2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 350.0
+offset_top = 72.0
+offset_right = 466.0
+offset_bottom = 130.0
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("24_rthkq")
+texture_hover = ExtResource("25_dvkym")
+
+[node name="guild_hall" type="TextureButton" parent="CanvasLayer/buildings/map2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 689.0
+offset_top = 192.0
+offset_right = 743.0
+offset_bottom = 250.0
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("27_twji7")
+texture_hover = ExtResource("28_t68bh")
+
+[node name="masonry" type="TextureButton" parent="CanvasLayer/buildings/map2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 813.0
+offset_top = 384.0
+offset_right = 863.0
+offset_bottom = 431.0
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("29_ay2tk")
+texture_hover = ExtResource("30_dr370")
+
+[node name="barracks" type="TextureButton" parent="CanvasLayer/buildings/map2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 633.0
+offset_top = 374.0
+offset_right = 689.0
+offset_bottom = 426.0
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("30_ervfa")
+texture_hover = ExtResource("31_6aa2x")
+
+[node name="monastery" type="TextureButton" parent="CanvasLayer/buildings/map2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 89.0
+offset_top = 288.0
+offset_right = 205.0
+offset_bottom = 352.0
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("32_nj7pd")
+texture_hover = ExtResource("33_s0gv7")
+
+[node name="market" type="TextureButton" parent="CanvasLayer/buildings/map2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 345.0
+offset_top = 500.0
+offset_right = 489.0
+offset_bottom = 640.0
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("35_x1pqe")
+texture_hover = ExtResource("36_7w4go")
+
+[node name="next_map_2" type="TextureButton" parent="CanvasLayer/buildings/map2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 583.0
+offset_top = 315.0
+offset_right = 598.0
+offset_bottom = 330.0
+scale = Vector2(2.4, 2.4)
+texture_pressed = ExtResource("36_jerls")
+texture_hover = ExtResource("37_vm353")
+
+[node name="interior_manager" type="Node" parent="CanvasLayer"]
+script = ExtResource("22_awh0r")
+
+[node name="lumber_mill" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("30_esw1a")
+hover_select = NodePath("../../hover_select")
+job_manager = NodePath("../../job_manager")
+
+[node name="interior" type="Panel" parent="CanvasLayer/interior_manager/lumber_mill"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 33.0
+offset_right = 786.0
+offset_bottom = -59.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/lumber_mill/interior"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="reception" type="Panel" parent="CanvasLayer/interior_manager/lumber_mill/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="building_name" type="Label" parent="CanvasLayer/interior_manager/lumber_mill/interior/VBoxContainer/reception"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%s"
+
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/lumber_mill/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/lumber_mill/interior/VBoxContainer/job_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/lumber_mill/interior/VBoxContainer/job_list/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="exit_interior" type="Button" parent="CanvasLayer/interior_manager/lumber_mill/interior"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "EXIT"
+
+[node name="blacksmith" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("30_esw1a")
+hover_select = NodePath("../../hover_select")
+job_manager = NodePath("../../job_manager")
+
+[node name="interior" type="Panel" parent="CanvasLayer/interior_manager/blacksmith"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 33.0
+offset_right = 786.0
+offset_bottom = -59.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/blacksmith/interior"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="reception" type="Panel" parent="CanvasLayer/interior_manager/blacksmith/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="building_name" type="Label" parent="CanvasLayer/interior_manager/blacksmith/interior/VBoxContainer/reception"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%s"
+
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/blacksmith/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/blacksmith/interior/VBoxContainer/job_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/blacksmith/interior/VBoxContainer/job_list/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="exit_interior" type="Button" parent="CanvasLayer/interior_manager/blacksmith/interior"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "EXIT"
+
+[node name="farm" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("30_esw1a")
+hover_select = NodePath("../../hover_select")
+job_manager = NodePath("../../job_manager")
+
+[node name="interior" type="Panel" parent="CanvasLayer/interior_manager/farm"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 33.0
+offset_right = 786.0
+offset_bottom = -59.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/farm/interior"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="reception" type="Panel" parent="CanvasLayer/interior_manager/farm/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="building_name" type="Label" parent="CanvasLayer/interior_manager/farm/interior/VBoxContainer/reception"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%s"
+
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/farm/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/farm/interior/VBoxContainer/job_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/farm/interior/VBoxContainer/job_list/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="exit_interior" type="Button" parent="CanvasLayer/interior_manager/farm/interior"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "EXIT"
+
+[node name="fishing_hut" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("30_esw1a")
+hover_select = NodePath("../../hover_select")
+job_manager = NodePath("../../job_manager")
+
+[node name="interior" type="Panel" parent="CanvasLayer/interior_manager/fishing_hut"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 33.0
+offset_right = 786.0
+offset_bottom = -59.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/fishing_hut/interior"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="reception" type="Panel" parent="CanvasLayer/interior_manager/fishing_hut/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="building_name" type="Label" parent="CanvasLayer/interior_manager/fishing_hut/interior/VBoxContainer/reception"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%s"
+
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/fishing_hut/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/fishing_hut/interior/VBoxContainer/job_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/fishing_hut/interior/VBoxContainer/job_list/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="exit_interior" type="Button" parent="CanvasLayer/interior_manager/fishing_hut/interior"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "EXIT"
+
+[node name="hunting_lodge" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("30_esw1a")
+hover_select = NodePath("../../hover_select")
+job_manager = NodePath("../../job_manager")
+
+[node name="interior" type="Panel" parent="CanvasLayer/interior_manager/hunting_lodge"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 33.0
+offset_right = 786.0
+offset_bottom = -59.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/hunting_lodge/interior"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="reception" type="Panel" parent="CanvasLayer/interior_manager/hunting_lodge/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="building_name" type="Label" parent="CanvasLayer/interior_manager/hunting_lodge/interior/VBoxContainer/reception"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%s"
+
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/hunting_lodge/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/hunting_lodge/interior/VBoxContainer/job_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/hunting_lodge/interior/VBoxContainer/job_list/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="exit_interior" type="Button" parent="CanvasLayer/interior_manager/hunting_lodge/interior"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "EXIT"
+
+[node name="slave_quarters" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("30_esw1a")
+hover_select = NodePath("../../hover_select")
+job_manager = NodePath("../../job_manager")
+
+[node name="interior" type="Panel" parent="CanvasLayer/interior_manager/slave_quarters"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 33.0
+offset_right = 786.0
+offset_bottom = -59.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/slave_quarters/interior"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="reception" type="Panel" parent="CanvasLayer/interior_manager/slave_quarters/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="building_name" type="Label" parent="CanvasLayer/interior_manager/slave_quarters/interior/VBoxContainer/reception"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%s"
+
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/slave_quarters/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/slave_quarters/interior/VBoxContainer/job_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/slave_quarters/interior/VBoxContainer/job_list/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="exit_interior" type="Button" parent="CanvasLayer/interior_manager/slave_quarters/interior"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "EXIT"
+
+[node name="refugee_quarters" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("30_esw1a")
+hover_select = NodePath("../../hover_select")
+job_manager = NodePath("../../job_manager")
+
+[node name="interior" type="Panel" parent="CanvasLayer/interior_manager/refugee_quarters"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 33.0
+offset_right = 786.0
+offset_bottom = -59.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/refugee_quarters/interior"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="reception" type="Panel" parent="CanvasLayer/interior_manager/refugee_quarters/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="building_name" type="Label" parent="CanvasLayer/interior_manager/refugee_quarters/interior/VBoxContainer/reception"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%s"
+
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/refugee_quarters/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/refugee_quarters/interior/VBoxContainer/job_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/refugee_quarters/interior/VBoxContainer/job_list/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="exit_interior" type="Button" parent="CanvasLayer/interior_manager/refugee_quarters/interior"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "EXIT"
+
+[node name="guild_hall" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("30_esw1a")
+hover_select = NodePath("../../hover_select")
+job_manager = NodePath("../../job_manager")
+
+[node name="interior" type="Panel" parent="CanvasLayer/interior_manager/guild_hall"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 33.0
+offset_right = 786.0
+offset_bottom = -59.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/guild_hall/interior"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="reception" type="Panel" parent="CanvasLayer/interior_manager/guild_hall/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="building_name" type="Label" parent="CanvasLayer/interior_manager/guild_hall/interior/VBoxContainer/reception"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%s"
+
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/guild_hall/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/guild_hall/interior/VBoxContainer/job_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/guild_hall/interior/VBoxContainer/job_list/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="exit_interior" type="Button" parent="CanvasLayer/interior_manager/guild_hall/interior"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "EXIT"
+
+[node name="masonry" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("30_esw1a")
+hover_select = NodePath("../../hover_select")
+job_manager = NodePath("../../job_manager")
+
+[node name="interior" type="Panel" parent="CanvasLayer/interior_manager/masonry"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 33.0
+offset_right = 786.0
+offset_bottom = -59.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/masonry/interior"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="reception" type="Panel" parent="CanvasLayer/interior_manager/masonry/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="building_name" type="Label" parent="CanvasLayer/interior_manager/masonry/interior/VBoxContainer/reception"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%s"
+
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/masonry/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/masonry/interior/VBoxContainer/job_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/masonry/interior/VBoxContainer/job_list/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="exit_interior" type="Button" parent="CanvasLayer/interior_manager/masonry/interior"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "EXIT"
+
+[node name="barracks" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("30_esw1a")
+hover_select = NodePath("../../hover_select")
+job_manager = NodePath("../../job_manager")
+
+[node name="interior" type="Panel" parent="CanvasLayer/interior_manager/barracks"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 33.0
+offset_right = 786.0
+offset_bottom = -59.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/barracks/interior"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="reception" type="Panel" parent="CanvasLayer/interior_manager/barracks/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="building_name" type="Label" parent="CanvasLayer/interior_manager/barracks/interior/VBoxContainer/reception"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%s"
+
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/barracks/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/barracks/interior/VBoxContainer/job_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/barracks/interior/VBoxContainer/job_list/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="exit_interior" type="Button" parent="CanvasLayer/interior_manager/barracks/interior"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "EXIT"
+
+[node name="monastery" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("30_esw1a")
+hover_select = NodePath("../../hover_select")
+job_manager = NodePath("../../job_manager")
+
+[node name="interior" type="Panel" parent="CanvasLayer/interior_manager/monastery"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 33.0
+offset_right = 786.0
+offset_bottom = -59.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/monastery/interior"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="reception" type="Panel" parent="CanvasLayer/interior_manager/monastery/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="building_name" type="Label" parent="CanvasLayer/interior_manager/monastery/interior/VBoxContainer/reception"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%s"
+
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/monastery/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/monastery/interior/VBoxContainer/job_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/monastery/interior/VBoxContainer/job_list/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="exit_interior" type="Button" parent="CanvasLayer/interior_manager/monastery/interior"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "EXIT"
+
+[node name="market" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("30_esw1a")
+hover_select = NodePath("../../hover_select")
+job_manager = NodePath("../../job_manager")
+
+[node name="interior" type="Panel" parent="CanvasLayer/interior_manager/market"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 33.0
+offset_right = 786.0
+offset_bottom = -59.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/market/interior"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="reception" type="Panel" parent="CanvasLayer/interior_manager/market/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="building_name" type="Label" parent="CanvasLayer/interior_manager/market/interior/VBoxContainer/reception"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%s"
+
+[node name="job_list" type="Panel" parent="CanvasLayer/interior_manager/market/interior/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/interior_manager/market/interior/VBoxContainer/job_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/interior_manager/market/interior/VBoxContainer/job_list/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="exit_interior" type="Button" parent="CanvasLayer/interior_manager/market/interior"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "EXIT"
+
+[node name="job_manager" type="Node" parent="CanvasLayer"]
+script = ExtResource("8_jero7")
+blacksmith = Array[ExtResource("23_2gtsp")]([ExtResource("24_eqfgu"), ExtResource("25_a7u4e"), ExtResource("26_hn8ab"), ExtResource("27_4kjbs")])
+farm = Array[ExtResource("23_2gtsp")]([ExtResource("28_skiny"), ExtResource("29_wgkoa"), ExtResource("30_0kn4y"), ExtResource("31_5qj6i"), ExtResource("32_nj6db")])
+fishing_hut = Array[ExtResource("23_2gtsp")]([ExtResource("33_udl86"), ExtResource("34_mpnfl"), ExtResource("35_b64ml"), ExtResource("36_qqjdh"), ExtResource("37_upmdq")])
+hunting_lodge = Array[ExtResource("23_2gtsp")]([ExtResource("38_aocma"), ExtResource("39_7kvsa"), ExtResource("40_ud4s0"), ExtResource("41_g3j8u")])
+lumber_mill = Array[ExtResource("23_2gtsp")]([ExtResource("42_4roej"), ExtResource("43_jraqy"), ExtResource("44_bm6hj"), ExtResource("45_6kfhy")])
+refugee_quarters = Array[ExtResource("23_2gtsp")]([ExtResource("2_stgm5"), ExtResource("46_b6nln"), ExtResource("47_u50n8")])
+slave_quarters = Array[ExtResource("23_2gtsp")]([ExtResource("48_amx4i"), ExtResource("49_2kcva"), ExtResource("50_oca5b")])
+
+[node name="UI" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("finance_manager", "character_manager")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_cneqf")
+finance_manager = NodePath("../../finance_manager")
+character_manager = NodePath("../../finance_manager/character_manager")
+
+[node name="open_char_stat" type="Button" parent="CanvasLayer/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+text = "Character Status"
+
+[node name="status" type="Panel" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -369.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/status"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="character_desc" type="Panel" parent="CanvasLayer/UI/status/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="portrait" type="TextureRect" parent="CanvasLayer/UI/status/VBoxContainer/character_desc"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 111.0
+offset_bottom = 117.0
+texture = SubResource("AtlasTexture_qd8sa")
+expand_mode = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/character_desc"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="portrait_space" type="Control" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="labels" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="name" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/labels"]
+layout_mode = 2
+text = "Name: %s"
+
+[node name="age" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/labels"]
+layout_mode = 2
+text = "Age: %s"
+
+[node name="Label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/labels"]
+layout_mode = 2
+text = "Life span: 75.0"
+label_settings = SubResource("LabelSettings_iuu6w")
+
+[node name="filler" type="Control" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="finance_bar" type="Panel" parent="CanvasLayer/UI/status/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "My Money:"
+horizontal_alignment = 1
+
+[node name="wallet_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "%s"
+
+[node name="Label2" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Job Salary:"
+
+[node name="salary_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "%s"
+
+[node name="Label3" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Total Expenses:"
+
+[node name="expenses_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "%s"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Current Job:"
+horizontal_alignment = 1
+
+[node name="job_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "%s"
+
+[node name="job_exp" type="ProgressBar" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Job's Level:"
+
+[node name="jl_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/finance_bar/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "%s"
+
+[node name="inventory" type="Panel" parent="CanvasLayer/UI/status/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/UI/status/VBoxContainer/inventory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/inventory/ScrollContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="CanvasLayer/UI/status/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="exit_char_stat" type="Button" parent="CanvasLayer/UI/status"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+text = "Exit"
+
+[node name="shop_ui" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("character_manager", "finance_manager")]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 761.0
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("61_uotj2")
+character_manager = NodePath("../../finance_manager/character_manager")
+finance_manager = NodePath("../../finance_manager")
+item_list = Array[ExtResource("62_1s0k7")]([ExtResource("63_oqmnu"), ExtResource("64_hsvu1"), ExtResource("65_krsd0"), ExtResource("66_nb7mb"), ExtResource("67_cdsm3"), ExtResource("68_rnv7y"), ExtResource("69_b42wf"), ExtResource("70_sbx07"), ExtResource("71_fo86l"), ExtResource("72_shprd"), ExtResource("73_2lww5"), ExtResource("74_p100h"), ExtResource("75_hym0n"), ExtResource("76_nruo0")])
+
+[node name="open_shop" type="Button" parent="CanvasLayer/shop_ui"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Open Shop"
+
+[node name="Button" type="Button" parent="CanvasLayer/shop_ui"]
+layout_mode = 0
+offset_left = 124.0
+offset_right = 260.0
+offset_bottom = 31.0
+text = "Open Lord's Hall"
+
+[node name="shop" type="Panel" parent="CanvasLayer/shop_ui"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -410.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="exit_shop" type="Button" parent="CanvasLayer/shop_ui/shop"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Exit Shop
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/shop_ui/shop"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="status_bar" type="Control" parent="CanvasLayer/shop_ui/shop/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="shop_list" type="Control" parent="CanvasLayer/shop_ui/shop/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+mouse_filter = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/shop_ui/shop/VBoxContainer/shop_list"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/shop_ui/shop/VBoxContainer/shop_list/ScrollContainer"]
+layout_mode = 2
+
+[node name="event_manager" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("character_manager", "finance_manager", "hover_select")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("61_vnwhq")
+first_event = ExtResource("62_wffkc")
+random_general_event = Array[ExtResource("63_mpann")]([ExtResource("64_bnu8n"), ExtResource("65_ueop6"), ExtResource("66_subff"), ExtResource("68_7b4v1"), ExtResource("69_vnx21"), ExtResource("70_qvu22")])
+chance = 0.008
+character_manager = NodePath("../../finance_manager/character_manager")
+finance_manager = NodePath("../../finance_manager")
+hover_select = NodePath("../hover_select")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/event_manager"]
+wait_time = 0.1
+autostart = true
+
+[node name="paused_menu" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("job_manager", "finance_manager", "event_manager", "character_manager")]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("61_aif7j")
+job_manager = NodePath("../job_manager")
+finance_manager = NodePath("../../finance_manager")
+event_manager = NodePath("../event_manager")
+character_manager = NodePath("../../finance_manager/character_manager")
+
+[node name="background" type="Panel" parent="CanvasLayer/paused_menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="button_screen" type="CenterContainer" parent="CanvasLayer/paused_menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/paused_menu/button_screen"]
+layout_mode = 2
+
+[node name="resume" type="Button" parent="CanvasLayer/paused_menu/button_screen/VBoxContainer"]
+layout_mode = 2
+text = "RESUME"
+
+[node name="settings" type="Button" parent="CanvasLayer/paused_menu/button_screen/VBoxContainer"]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="save_quit" type="Button" parent="CanvasLayer/paused_menu/button_screen/VBoxContainer"]
+layout_mode = 2
+text = "SAVE & QUIT"
+
+[node name="settings" type="Panel" parent="CanvasLayer/paused_menu"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -373.0
+offset_top = -301.5
+offset_right = 373.0
+offset_bottom = 301.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/paused_menu/settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 9.0
+offset_right = -25.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+
+[node name="Label" type="Label" parent="CanvasLayer/paused_menu/settings/VBoxContainer"]
+layout_mode = 2
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="CanvasLayer/paused_menu/settings/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/paused_menu/settings/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/paused_menu/settings/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Music Audio"
+horizontal_alignment = 1
+
+[node name="music_scbar" type="HScrollBar" parent="CanvasLayer/paused_menu/settings/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+min_value = -72.0
+max_value = 6.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/paused_menu/settings/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/paused_menu/settings/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sound Audio"
+horizontal_alignment = 1
+
+[node name="sound_scbar" type="HScrollBar" parent="CanvasLayer/paused_menu/settings/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+min_value = -72.0
+max_value = 6.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/paused_menu/settings/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/paused_menu/settings/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fullscreen"
+horizontal_alignment = 1
+
+[node name="fullscreen_toggle" type="CheckButton" parent="CanvasLayer/paused_menu/settings/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+
+[node name="exit" type="Button" parent="CanvasLayer/paused_menu/settings"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -54.0
+offset_top = -62.5
+offset_right = 55.0
+offset_bottom = -31.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Exit Setttings"
+
+[node name="hover_select" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 212.0
+offset_top = 108.0
+offset_right = 543.0
+offset_bottom = 182.0
+script = ExtResource("72_mtdvr")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/hover_select"]
+visible = false
+layout_mode = 0
+offset_right = 259.0
+offset_bottom = 48.0
+
+[node name="Label" type="Label" parent="CanvasLayer/hover_select/Panel"]
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 23.0
+text = "Increases Job EXP by 50"
+
+[connection signal="timeout" from="finance_manager/Timer" to="finance_manager" method="_on_timer_timeout"]
+[connection signal="timeout" from="finance_manager/Timer" to="finance_manager/character_manager" method="_on_timer_timeout"]
+[connection signal="button_up" from="CanvasLayer/buildings/map1/lumber_mill" to="CanvasLayer/area_manager" method="_on_lumber_mill_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map1/blacksmith" to="CanvasLayer/area_manager" method="_on_blacksmith_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map1/farm" to="CanvasLayer/area_manager" method="_on_farm_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map1/fishing_hut" to="CanvasLayer/area_manager" method="_on_fishing_hut_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map1/hunting_lodge" to="CanvasLayer/area_manager" method="_on_hunting_lodge_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map1/slave_quarters" to="CanvasLayer/area_manager" method="_on_slave_quarters_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map1/refugee_quarters" to="CanvasLayer/area_manager" method="_on_refugee_quarters_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map1/next_map" to="CanvasLayer/area_manager" method="_on_next_map_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map2/lords_hall" to="CanvasLayer/area_manager" method="_on_lords_hall_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map2/guild_hall" to="CanvasLayer/area_manager" method="_on_guild_hall_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map2/masonry" to="CanvasLayer/area_manager" method="_on_masonry_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map2/barracks" to="CanvasLayer/area_manager" method="_on_barracks_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map2/monastery" to="CanvasLayer/area_manager" method="_on_monastery_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map2/market" to="CanvasLayer/area_manager" method="_on_market_button_up"]
+[connection signal="button_up" from="CanvasLayer/buildings/map2/next_map_2" to="CanvasLayer/area_manager" method="_on_next_map_2_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior_manager/lumber_mill/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior_manager/blacksmith/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior_manager/farm/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior_manager/fishing_hut/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior_manager/hunting_lodge/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior_manager/slave_quarters/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior_manager/refugee_quarters/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior_manager/guild_hall/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior_manager/masonry/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior_manager/barracks/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior_manager/monastery/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/interior_manager/market/interior/exit_interior" to="CanvasLayer/interior_manager" method="_on_exit_interior_button_up"]
+[connection signal="button_up" from="CanvasLayer/UI/open_char_stat" to="CanvasLayer/UI" method="_on_open_char_stat_button_up"]
+[connection signal="button_up" from="CanvasLayer/UI/status/exit_char_stat" to="CanvasLayer/UI" method="_on_exit_char_stat_button_up"]
+[connection signal="button_up" from="CanvasLayer/shop_ui/open_shop" to="CanvasLayer/shop_ui" method="open_shop"]
+[connection signal="button_up" from="CanvasLayer/shop_ui/shop/exit_shop" to="CanvasLayer/shop_ui" method="exit_shop"]
+[connection signal="timeout" from="CanvasLayer/event_manager/Timer" to="CanvasLayer/event_manager" method="_on_timer_timeout"]
+[connection signal="button_up" from="CanvasLayer/paused_menu/button_screen/VBoxContainer/resume" to="CanvasLayer/paused_menu" method="resume"]
+[connection signal="button_up" from="CanvasLayer/paused_menu/button_screen/VBoxContainer/settings" to="CanvasLayer/paused_menu" method="open_settings"]
+[connection signal="button_up" from="CanvasLayer/paused_menu/button_screen/VBoxContainer/save_quit" to="CanvasLayer/paused_menu" method="save_quit"]
+[connection signal="button_up" from="CanvasLayer/paused_menu/settings/exit" to="CanvasLayer/paused_menu" method="close_settings"]

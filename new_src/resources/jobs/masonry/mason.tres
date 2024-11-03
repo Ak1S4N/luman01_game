@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://d0be1ndah507s"]
+
+[ext_resource type="Resource" uid="uid://dyc8qde6s8ob0" path="res://new_src/resources/jobs/masonry/builder.tres" id="1_a3iyt"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="2_7up43"]
+
+[resource]
+script = ExtResource("2_7up43")
+job_title = "Mason"
+salary = 14
+level = 1
+psi_perle = 0.5
+exp = 0.0
+max_exp = 100.0
+pmei_perle = 0.3
+job_required = ExtResource("1_a3iyt")
+jr_level_required = 5
+item_required = "No item"
+title_required = "Title Requirement"

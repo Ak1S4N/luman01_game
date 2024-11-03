@@ -49,9 +49,22 @@ text = "option 1"
 layout_mode = 2
 text = "option 2"
 
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Your New Name:"
+
+[node name="name_enter" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+placeholder_text = "Name Here"
+
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/option_1" to="." method="_on_option_1_button_up"]
 [connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/option_1" to="." method="option_1_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer/HBoxContainer/option_1" to="." method="option_1_mouse_exit"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/option_2" to="." method="_on_option_2_button_up"]
 [connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/option_2" to="." method="option_2_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer/HBoxContainer/option_2" to="." method="option_2_mouse_exit"]
+[connection signal="text_changed" from="VBoxContainer/HBoxContainer/name_enter" to="." method="_on_name_enter_text_changed"]

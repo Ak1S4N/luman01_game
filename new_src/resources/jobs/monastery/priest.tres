@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Job" load_steps=3 format=3 uid="uid://bmoy4cu4fikto"]
+
+[ext_resource type="Resource" uid="uid://dd0g7mdq4asan" path="res://new_src/resources/jobs/monastery/deacon.tres" id="1_suens"]
+[ext_resource type="Script" path="res://new_src/scripts/classes/job.gd" id="2_o1bqr"]
+
+[resource]
+script = ExtResource("2_o1bqr")
+job_title = "Priest"
+salary = 5
+level = 1
+psi_perle = 0.5
+exp = 0.0
+max_exp = 80.0
+pmei_perle = 0.1
+job_required = ExtResource("1_suens")
+jr_level_required = 5
+item_required = "No item"
+title_required = "No Requirement"

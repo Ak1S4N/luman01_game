@@ -7,7 +7,11 @@ var job_list: Array[Job]
 
 const CONTAINER = preload("res://new_src/objects/job_list_item/container.tscn")
 
+@onready var building_name: Label = $interior/VBoxContainer/reception/building_name
+
 func _ready() -> void:
+	building_name.text = self.name
+	
 	if job_manager.has_method("give_list"):
 		job_list = job_manager.give_list(self.name)
 	

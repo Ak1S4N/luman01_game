@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://c7lsof7nky7qk"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/item.gd" id="1_1mthl"]
+
+[resource]
+script = ExtResource("1_1mthl")
+item_name = "Longbow"
+item_description = "Used to unlock more jobs
+Raise your EXP Gain"
+value = 3.0
+price = 9
+item_type = 0

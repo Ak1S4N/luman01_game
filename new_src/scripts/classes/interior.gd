@@ -1,4 +1,4 @@
 extends Control
 class_name Interior
 
-@export var job_manager: Managers
+@export var job_manager: JobManager

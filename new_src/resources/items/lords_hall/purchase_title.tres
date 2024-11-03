@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cwqy5y16nue85"]
+
+[ext_resource type="Script" path="res://new_src/scripts/classes/item.gd" id="1_oui7s"]
+
+[resource]
+script = ExtResource("1_oui7s")
+item_name = "Purchase Title"
+item_description = "One Time Pay.
+I promise"
+value = 0.0
+price = 4000
+item_type = 0
