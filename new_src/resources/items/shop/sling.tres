@@ -5,7 +5,9 @@
 [resource]
 script = ExtResource("1_xn31b")
 item_name = "Sling"
-item_description = "Used to unlock some jobs."
+item_description = "Used to unlock some jobs.
+ONE TIME PAY"
 value = 2.0
-price = 3
+price = 1200
+pay_type = "one-time pay"
 item_type = 0

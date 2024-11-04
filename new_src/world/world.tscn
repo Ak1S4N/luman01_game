@@ -148,7 +148,7 @@ event_manager = NodePath("../../CanvasLayer/event_manager")
 ui_manager = NodePath("../../CanvasLayer/UI")
 
 [node name="Timer" type="Timer" parent="finance_manager"]
-wait_time = 0.1
+wait_time = 0.15
 autostart = true
 
 [node name="panorama" type="Node2D" parent="."]
@@ -1361,9 +1361,34 @@ layout_mode = 2
 text = "Life span: 75.0"
 label_settings = SubResource("LabelSettings_iuu6w")
 
-[node name="filler" type="Control" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer"]
+[node name="date_n_stuff" type="VBoxContainer" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="filler" type="Control" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/date_n_stuff"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/date_n_stuff"]
+layout_mode = 2
+text = "Date:"
+
+[node name="date_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/date_n_stuff"]
+layout_mode = 2
+text = "%s"
+
+[node name="filler2" type="Control" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/date_n_stuff"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+
+[node name="Label2" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/date_n_stuff"]
+layout_mode = 2
+text = "Birthday:"
+
+[node name="birth_label" type="Label" parent="CanvasLayer/UI/status/VBoxContainer/character_desc/VBoxContainer/date_n_stuff"]
+layout_mode = 2
+text = "%s"
 
 [node name="finance_bar" type="Panel" parent="CanvasLayer/UI/status/VBoxContainer"]
 layout_mode = 2
@@ -1621,7 +1646,7 @@ world = NodePath("../..")
 hover_select = NodePath("../hover_select")
 
 [node name="Timer" type="Timer" parent="CanvasLayer/event_manager"]
-wait_time = 0.1
+wait_time = 0.15
 autostart = true
 
 [node name="paused_menu" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("job_manager", "finance_manager", "event_manager", "character_manager")]

@@ -6,7 +6,9 @@
 script = ExtResource("1_2jj26")
 item_name = "Mace"
 item_description = "Used to unlock more Job
-Add more EXP Gain"
+Add more EXP Gain
+ONE TIME PAY"
 value = 4.0
-price = 7
+price = 2500
+pay_type = "one-time pay"
 item_type = 0

@@ -6,7 +6,9 @@
 script = ExtResource("1_7irbi")
 item_name = "Stave"
 item_description = "Used to unlock some jobs.
-Gain EXP"
+one time pay. Gain EXP
+ONE TIME PAY"
 value = 10.0
-price = 10
+price = 3200
+pay_type = "one-time pay"
 item_type = 0

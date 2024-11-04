@@ -6,7 +6,9 @@
 script = ExtResource("1_1mthl")
 item_name = "Longbow"
 item_description = "Used to unlock more jobs
-Raise your EXP Gain"
+Raise your EXP Gain
+ONE TIME PAY"
 value = 3.0
-price = 9
+price = 3100
+pay_type = "one-time pay"
 item_type = 0

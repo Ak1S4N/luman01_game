@@ -6,7 +6,9 @@
 script = ExtResource("1_1lh3t")
 item_name = "Quality Tools"
 item_description = "This won't break. EVER.
-Gain more Job EXP"
+Gain more Job EXP
+ONE TIME PAY"
 value = 9.0
-price = 9
+price = 2400
+pay_type = "one-time pay"
 item_type = 0

@@ -5,12 +5,12 @@
 [resource]
 script = ExtResource("1_p782s")
 job_title = "Recruit"
-salary = 5
+salary = 3
 level = 1
-psi_perle = 0.3
+psi_perle = 0.2
 exp = 0.0
 max_exp = 100.0
-pmei_perle = 0.3
+pmei_perle = 0.5
 jr_level_required = 0
 item_required = "Stave"
 title_required = "No Requirement"

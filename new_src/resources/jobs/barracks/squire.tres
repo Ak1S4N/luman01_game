@@ -6,12 +6,12 @@
 [resource]
 script = ExtResource("1_sfeh7")
 job_title = "Squire"
-salary = 7
+salary = 5
 level = 1
-psi_perle = 0.3
+psi_perle = 0.2
 exp = 0.0
 max_exp = 100.0
-pmei_perle = 0.3
+pmei_perle = 0.55
 job_required = ExtResource("1_683wf")
 jr_level_required = 10
 item_required = "Stave"

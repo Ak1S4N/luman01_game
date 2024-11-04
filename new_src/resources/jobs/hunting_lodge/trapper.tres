@@ -6,13 +6,13 @@
 [resource]
 script = ExtResource("1_7vo4e")
 job_title = "Trapper"
-salary = 10
+salary = 7
 level = 1
-psi_perle = 0.4
+psi_perle = 0.2
 exp = 0.0
 max_exp = 100.0
-pmei_perle = 0.4
+pmei_perle = 0.55
 job_required = ExtResource("1_04i8e")
-jr_level_required = 3
+jr_level_required = 5
 item_required = "Sling"
 title_required = "No Requirement"

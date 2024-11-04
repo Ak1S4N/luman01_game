@@ -5,7 +5,9 @@
 [resource]
 script = ExtResource("1_tkxey")
 item_name = "Hunting Bow"
-item_description = "Used to unlock more job"
+item_description = "Used to unlock more job
+ONE TIME PAY"
 value = 0.0
-price = 6
+price = 2400
+pay_type = "one-time pay"
 item_type = 0

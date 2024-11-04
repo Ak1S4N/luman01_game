@@ -42,8 +42,12 @@ func _ready() -> void:
 
 func get_item(item: Item) -> void:
 	if not character_manager.current_items.has(item):
-		finance_manager.add_to_total_expenses(item.price)
-		character_manager.current_items.append(item)
+		if item.pay_type == "constant":
+			finance_manager.add_to_total_expenses(item.price)
+			character_manager.current_items.append(item)
+		elif item.pay_type == "one-time pay":
+			finance_manager.wallet -= item.price
+			character_manager.current_items.append(item)
 		ui_manager.add_to_inventory(item)
 		_CONDITIONS_MET.append_condition("item_conditions", item.item_name)
 

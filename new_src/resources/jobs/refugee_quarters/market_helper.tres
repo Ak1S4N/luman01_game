@@ -6,12 +6,12 @@
 [resource]
 script = ExtResource("1_iek2y")
 job_title = "Market Helper"
-salary = 3
+salary = 2
 level = 1
-psi_perle = 0.4
+psi_perle = 0.2
 exp = 0.0
 max_exp = 100.0
-pmei_perle = 0.3
+pmei_perle = 0.5
 job_required = ExtResource("1_8gp2y")
 jr_level_required = 5
 item_required = "No item"

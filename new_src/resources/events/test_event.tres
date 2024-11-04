@@ -8,7 +8,13 @@
 [resource]
 script = ExtResource("1_6hai6")
 event_title = "You've been born"
-event_description = "You have now been born into this world... While your eyes are still closed, a god whispered to you and gave you an option to choose your start."
+event_description = "You have now been born into this world... While your eyes are still closed, a god whispered to you with gentle voice.
+
+\"Enjoy this... And be rich as possible for the next generation.\"
+
+And then, the god gave you two job options
+
+You have a decision."
 has_occured = false
 type = 0
 job_options = Array[ExtResource("1_c5uyq")]([ExtResource("2_dphp4"), ExtResource("3_220ry")])

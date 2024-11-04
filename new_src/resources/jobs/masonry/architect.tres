@@ -9,10 +9,10 @@ job_title = "Architect
 "
 salary = 20
 level = 1
-psi_perle = 0.6
+psi_perle = 0.3
 exp = 0.0
 max_exp = 100.0
-pmei_perle = 0.4
+pmei_perle = 0.65
 job_required = ExtResource("1_jwl2j")
 jr_level_required = 5
 item_required = "No item"

@@ -5,7 +5,9 @@
 [resource]
 script = ExtResource("1_pqbwr")
 item_name = "Tools"
-item_description = "Required for some jobs."
+item_description = "Required for some jobs.
+ONE TIME PAY"
 value = 0.0
-price = 2
+price = 1200
+pay_type = "one-time pay"
 item_type = 0

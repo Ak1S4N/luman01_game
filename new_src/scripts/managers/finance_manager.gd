@@ -25,12 +25,14 @@ func _on_timer_timeout() -> void:
 		income = current_job.salary
 		wallet += current_job.salary
 		current_job.exp += jeg
+		wallet -= total_expenses
 		
-		if character_manager.current_items:
-			for i in character_manager.current_items:
-				if i.price:
-					var expense = i.price
-					wallet -= expense
+		
+		#if character_manager.current_items:
+			#for i in character_manager.current_items:
+				#if i.price:
+					#var expense = i.price
+					#wallet -= expense
 				
 		
 		
@@ -43,10 +45,10 @@ func _on_timer_timeout() -> void:
 			current_job.level += 1
 			current_job.exp = 0
 	
-	if wallet <= 0:
-		event_manager.back_to_zero()
-		wallet = 0
-		total_expenses = 0
+		if wallet <= 0:
+			event_manager.back_to_zero()
+			wallet = 0
+			total_expenses = 0
 	
 
 func job_transfer(job_rsc: Job) -> void:

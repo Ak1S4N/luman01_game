@@ -6,7 +6,9 @@
 script = ExtResource("1_bmx7o")
 item_name = "Spear"
 item_description = "Used to unlock some Jobs
-Gain more EXP"
+Gain more EXP
+ONE TIME PAY"
 value = 8.0
-price = 8
+price = 2100
+pay_type = "constant"
 item_type = 0

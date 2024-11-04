@@ -6,12 +6,12 @@
 [resource]
 script = ExtResource("1_77smd")
 job_title = "Hunter"
-salary = 14
+salary = 10
 level = 1
-psi_perle = 0.45
+psi_perle = 0.25
 exp = 0.0
 max_exp = 100.0
-pmei_perle = 0.3
+pmei_perle = 0.75
 job_required = ExtResource("1_ofevl")
 jr_level_required = 3
 item_required = "Sling"

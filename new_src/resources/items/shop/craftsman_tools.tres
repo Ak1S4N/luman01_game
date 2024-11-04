@@ -6,7 +6,9 @@
 script = ExtResource("1_iesku")
 item_name = "Craftsman Tools"
 item_description = "Tools of the best-of-the-best
-Gain more EXP and PRESTIGE"
+Gain more EXP and PRESTIGE
+ONE TIME PAY"
 value = 2.0
-price = 5
+price = 3800
+pay_type = "one-time pay"
 item_type = 0

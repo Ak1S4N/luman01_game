@@ -6,7 +6,9 @@
 script = ExtResource("1_2h28k")
 item_name = "Sword"
 item_description = "Used to get some Jobs.
-Gain PRESTIGE and EXP"
+Gain PRESTIGE and EXP
+ONE TIME PAY "
 value = 15.0
-price = 17
+price = 4100
+pay_type = "one-time pay"
 item_type = 0
