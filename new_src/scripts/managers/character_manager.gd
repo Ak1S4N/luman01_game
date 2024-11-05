@@ -28,10 +28,10 @@ var month: Dictionary = {
 }
 var current_month: String
 var month_day: int = randi_range(0, 30)
-var year: int = randi_range(1500, 1700)
+var year: int = 1526
 
 var birth_day: Dictionary = {
-	"Birthyear": 0,
+	"Birthyear": 1511,
 	"Birthmonth": "NA",
 	"Birthday": 0
 }
