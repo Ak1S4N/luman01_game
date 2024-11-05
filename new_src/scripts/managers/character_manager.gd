@@ -31,7 +31,7 @@ var month_day: int = randi_range(0, 30)
 var year: int = 1526
 
 var birth_day: Dictionary = {
-	"Birthyear": 1511,
+	"Birthyear": 0,
 	"Birthmonth": "NA",
 	"Birthday": 0
 }
@@ -58,8 +58,8 @@ func _ready() -> void:
 		var random_month = randi_range(1, 12)
 		current_month = month[random_month]
 		birth_day = {
-			"birthyear": year,
-			"birthmonth": current_month,
+			"birthyear": 1511,
+			"birthmonth": month[random_month],
 			"birthday": month_day
 		}
 	birth_label.text = birth_day.get("birthmonth") + " " + str(birth_day.get("birthday")) + ", " + str(birth_day.get("birthyear"))
