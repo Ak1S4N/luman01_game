@@ -56,7 +56,7 @@ func _on_next_map_2_button_up() -> void:
 
 
 func _on_lords_hall_button_up() -> void:
-	emit_signal("enter_building", true, 12)
+	emit_signal("enter_building", true, 10)
 
 
 func _on_guild_hall_button_up() -> void:
@@ -74,7 +74,7 @@ func _on_barracks_button_up() -> void:
 
 
 func _on_monastery_button_up() -> void:
-	emit_signal("enter_building", true, 10)
+	emit_signal("enter_building", true, 12)
 
 
 

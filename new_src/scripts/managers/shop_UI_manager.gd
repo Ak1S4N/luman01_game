@@ -1,4 +1,5 @@
 extends Managers
+class_name ShopUI
 
 @export var character_manager: CharacterManager
 @export var finance_manager: FinanceManager
@@ -68,10 +69,13 @@ func exit_shop() -> void:
 	open_shop_btn.visible = true
 
 func _on_open_lords_hall_button_up() -> void:
+	if lords_hall.visible == false:
+		open_lords_hall()
+
+func open_lords_hall() -> void:
 	lords_hall.visible = true
 	open_lords_hall_btn.visible = false
 	open_shop_btn.visible = false
-
 
 func exit_lords_hall() -> void:
 	lords_hall.visible = false

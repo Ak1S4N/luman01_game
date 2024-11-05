@@ -384,8 +384,9 @@ scale = Vector2(2.4, 2.4)
 texture_pressed = ExtResource("36_jerls")
 texture_hover = ExtResource("37_vm353")
 
-[node name="interior_manager" type="Node" parent="CanvasLayer"]
+[node name="interior_manager" type="Node" parent="CanvasLayer" node_paths=PackedStringArray("shop_ui")]
 script = ExtResource("22_awh0r")
+shop_ui = NodePath("../shop_ui")
 
 [node name="lumber_mill" type="Control" parent="CanvasLayer/interior_manager" node_paths=PackedStringArray("hover_select", "job_manager") groups=["interior"]]
 visible = false

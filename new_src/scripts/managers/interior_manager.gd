@@ -5,6 +5,9 @@ signal open_building
 
 @onready var interior_buildings: Array = get_tree().get_nodes_in_group("interior")
 
+@export var shop_ui: ShopUI
+
+
 #map_1
 @onready var lumber_mill: Control = $lumber_mill
 @onready var fishing_hut: Control = $fishing_hut
@@ -50,7 +53,8 @@ func interact_building(toggle: bool, id: int) -> void:
 			monastery.visible = toggle
 		11:
 			market.visible = toggle
-		
+		12:
+			shop_ui.open_lords_hall()
 		
 		
 		14:
