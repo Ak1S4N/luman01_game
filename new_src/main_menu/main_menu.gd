@@ -30,6 +30,7 @@ func quit() -> void:
 
 
 func _on_start_game_button_up() -> void:
+	SaveLoad.is_new_game = true
 	GameSettings.player_name = chosen_name
 	get_tree().change_scene_to_file("res://new_src/world/world.tscn")
 

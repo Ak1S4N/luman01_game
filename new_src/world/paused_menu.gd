@@ -34,7 +34,7 @@ func save_quit() -> void:
 	finance_manager.save()
 	event_manager.save_events()
 	character_manager.save_data()
-	get_tree().change_scene_to_file("res://new_src/main_menu/main_menu.tscn")
+	get_tree().quit()
 
 func _process(delta: float) -> void:
 	GameSettings.music_volume = music_scbar.value

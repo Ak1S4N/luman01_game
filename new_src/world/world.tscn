@@ -108,7 +108,7 @@
 [ext_resource type="Resource" uid="uid://yf1rt4jrg6j6" path="res://new_src/resources/items/shop/quality_tools.tres" id="75_hym0n"]
 [ext_resource type="Resource" uid="uid://bl678jcap54qd" path="res://new_src/resources/items/shop/craftsman_tools.tres" id="76_nruo0"]
 [ext_resource type="Resource" uid="uid://d0be1ndah507s" path="res://new_src/resources/jobs/masonry/mason.tres" id="76_qy3s3"]
-[ext_resource type="Resource" uid="uid://y32wnfm4eeex" path="res://new_src/resources/jobs/masonry/architect.tres" id="77_x7v27"]
+[ext_resource type="Resource" uid="uid://cemrlsdxq5r4g" path="res://new_src/resources/jobs/masonry/archit.tres" id="77_my67f"]
 [ext_resource type="Resource" uid="uid://86xgk2bgtwi5" path="res://new_src/resources/jobs/monastery/monk.tres" id="78_xtu5y"]
 [ext_resource type="Resource" uid="uid://dd0g7mdq4asan" path="res://new_src/resources/jobs/monastery/deacon.tres" id="79_4e5am"]
 [ext_resource type="Resource" uid="uid://bmoy4cu4fikto" path="res://new_src/resources/jobs/monastery/priest.tres" id="80_6mnlh"]
@@ -1273,7 +1273,7 @@ fishing_hut = Array[ExtResource("23_2gtsp")]([ExtResource("33_udl86"), ExtResour
 hunting_lodge = Array[ExtResource("23_2gtsp")]([ExtResource("38_aocma"), ExtResource("39_7kvsa"), ExtResource("40_ud4s0"), ExtResource("41_g3j8u")])
 lumber_mill = Array[ExtResource("23_2gtsp")]([ExtResource("42_4roej"), ExtResource("43_jraqy"), ExtResource("44_bm6hj"), ExtResource("45_6kfhy")])
 market = Array[ExtResource("23_2gtsp")]([ExtResource("69_6rvab"), ExtResource("70_djfg7"), ExtResource("71_on6gg"), ExtResource("72_bpkbe"), ExtResource("73_pndoo")])
-masonry = Array[ExtResource("23_2gtsp")]([ExtResource("74_3ioj3"), ExtResource("75_4uji8"), ExtResource("76_qy3s3"), ExtResource("77_x7v27")])
+masonry = Array[ExtResource("23_2gtsp")]([ExtResource("74_3ioj3"), ExtResource("75_4uji8"), ExtResource("76_qy3s3"), ExtResource("77_my67f")])
 monastery = Array[ExtResource("23_2gtsp")]([ExtResource("78_xtu5y"), ExtResource("79_4e5am"), ExtResource("80_6mnlh"), ExtResource("81_dikgh"), ExtResource("82_h64m6")])
 refugee_quarters = Array[ExtResource("23_2gtsp")]([ExtResource("2_stgm5"), ExtResource("46_b6nln"), ExtResource("47_u50n8")])
 slave_quarters = Array[ExtResource("23_2gtsp")]([ExtResource("48_amx4i"), ExtResource("49_2kcva"), ExtResource("50_oca5b")])

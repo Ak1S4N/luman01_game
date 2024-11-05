@@ -9,7 +9,7 @@ class_name CharacterManager
 
 var job_exp_gain: float = 1
 var skill_exp_gain: float = 1
-var age: int = 12
+var age: int = 15
 var day: int = 0
 
 var month: Dictionary = {
@@ -49,7 +49,8 @@ func _ready() -> void:
 	randomize()
 	if not SaveLoad.is_new_game:
 		load_data()
-		name_label.text = "Name: " + player_name 
+		name_label.text = "Name: " + player_name
+		birth_label.text = birth_day.get("birthmonth") + " " + str(birth_day.get("birthday")) + ", " + str(birth_day.get("birthyear"))
 	else:
 		if GameSettings.player_name:
 			player_name = GameSettings.player_name
@@ -62,7 +63,7 @@ func _ready() -> void:
 			"birthday": month_day
 		}
 	birth_label.text = birth_day.get("birthmonth") + " " + str(birth_day.get("birthday")) + ", " + str(birth_day.get("birthyear"))
-	
+
 func _on_timer_timeout() -> void:
 	if not GameSettings.paused and not GameSettings.on_event:
 		if day <= 360:

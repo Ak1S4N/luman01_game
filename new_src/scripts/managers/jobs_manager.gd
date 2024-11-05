@@ -71,6 +71,7 @@ func save() -> void:
 			"job_max_exp": job.max_exp
 		}
 		SaveLoad.save(job_data, job_name)
+		print("1")
 	
 	for job in barracks:
 		var job_name = job.job_title
@@ -81,7 +82,8 @@ func save() -> void:
 			"job_max_exp": job.max_exp
 		}
 		SaveLoad.save(job_data, job_name)
-	
+		print("2")
+
 	for job in blacksmith:
 		var job_name = job.job_title
 		var job_data = {
@@ -91,6 +93,7 @@ func save() -> void:
 			"job_max_exp": job.max_exp
 		}
 		SaveLoad.save(job_data, job_name)
+		print("3")
 
 	for job in farm:
 		var job_name = job.job_title
@@ -101,6 +104,7 @@ func save() -> void:
 			"job_max_exp": job.max_exp
 		}
 		SaveLoad.save(job_data, job_name)
+		print("4")
 
 	for job in fishing_hut:
 		var job_name = job.job_title
@@ -111,6 +115,7 @@ func save() -> void:
 			"job_max_exp": job.max_exp
 		}
 		SaveLoad.save(job_data, job_name)
+		print("5")
 
 	for job in guild_hall:
 		var job_name = job.job_title
@@ -121,6 +126,7 @@ func save() -> void:
 			"job_max_exp": job.max_exp
 		}
 		SaveLoad.save(job_data, job_name)
+		print("6")
 
 	for job in hunting_lodge:
 		var job_name = job.job_title
@@ -131,6 +137,7 @@ func save() -> void:
 			"job_max_exp": job.max_exp
 		}
 		SaveLoad.save(job_data, job_name)
+		print("7")
 
 	for job in lumber_mill:
 		var job_name = job.job_title
@@ -141,6 +148,7 @@ func save() -> void:
 			"job_max_exp": job.max_exp
 		}
 		SaveLoad.save(job_data, job_name)
+		print("8")
 
 	for job in market:
 		var job_name = job.job_title
@@ -151,6 +159,7 @@ func save() -> void:
 			"job_max_exp": job.max_exp
 		}
 		SaveLoad.save(job_data, job_name)
+		print("9")
 
 	for job in masonry:
 		var job_name = job.job_title
@@ -161,6 +170,7 @@ func save() -> void:
 			"job_max_exp": job.max_exp
 		}
 		SaveLoad.save(job_data, job_name)
+		print("10")
 
 	for job in monastery:
 		var job_name = job.job_title
@@ -171,6 +181,7 @@ func save() -> void:
 			"job_max_exp": job.max_exp
 		}
 		SaveLoad.save(job_data, job_name)
+		print("11")
 
 	for job in slave_quarters:
 		var job_name = job.job_title
@@ -181,6 +192,7 @@ func save() -> void:
 			"job_max_exp": job.max_exp
 		}
 		SaveLoad.save(job_data, job_name)
+		print("12")
 
 func load_data() -> void:
 	for job in refugee_quarters:

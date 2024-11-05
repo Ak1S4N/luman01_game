@@ -30,6 +30,7 @@ func _ready() -> void:
 		event_instance.close_description.connect(hover_select.hide_description)
 		add_child(event_instance)
 		GameSettings.on_event = true
+		print("Wait")
 	else:
 		load_events()
 

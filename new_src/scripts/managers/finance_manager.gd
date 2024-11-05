@@ -27,15 +27,6 @@ func _on_timer_timeout() -> void:
 		current_job.exp += jeg
 		wallet -= total_expenses
 		
-		
-		#if character_manager.current_items:
-			#for i in character_manager.current_items:
-				#if i.price:
-					#var expense = i.price
-					#wallet -= expense
-				
-		
-		
 		if current_job.exp >= current_job.max_exp:
 			var add_max_exp = (current_job.max_exp * current_job.pmei_perle)
 			var add_salary = (current_job.salary * current_job.psi_perle)
@@ -69,7 +60,6 @@ func new_character() -> void:
 	wallet = 1
 
 
-
 func save() -> void:
 	var character_name = "player"
 	var character_data: Dictionary = {
@@ -87,3 +77,6 @@ func load_data() -> void:
 	var data_dict: Dictionary = SaveLoad.load_data("player", ["current_job", "wallet", "name", "age", "day"])
 	current_job = data_dict.get("current_job")
 	wallet = data_dict.get("wallet")
+
+func load_new_game() -> void:
+	pass
