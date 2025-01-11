@@ -17,8 +17,6 @@ func change_map(toggle: bool) -> void:
 	map_1.visible = !toggle
 	map_2.visible = toggle
 
-
-
 func _on_lumber_mill_button_up() -> void:
 	emit_signal("enter_building", true, 0)
 

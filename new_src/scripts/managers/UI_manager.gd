@@ -15,6 +15,7 @@ class_name UIManager
 
 @export var finance_manager: FinanceManager
 @export var character_manager: CharacterManager
+@export var world: World
 
 var ITEM_INV_CONTAINER = preload("res://new_src/objects/inventory_item/item_inv_container.tscn")
 
@@ -63,3 +64,7 @@ func _on_open_char_stat_button_up() -> void:
 
 func _on_exit_char_stat_button_up() -> void:
 	toggle_character_stats(false)
+
+
+func _on_paused_menu_button_up() -> void:
+	world.open_menu(true)

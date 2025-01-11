@@ -27,7 +27,7 @@ var month: Dictionary = {
 	12: "Dec"
 }
 var current_month: String
-var month_day: int = randi_range(0, 30)
+var month_day: int = randi_range(1, 31)
 var year: int = 1526
 
 var birth_day: Dictionary = {
@@ -72,7 +72,7 @@ func _on_timer_timeout() -> void:
 			age += 1
 			day = 0
 		
-		if month_day < 30:
+		if month_day < 31:
 			month_day += 1
 		else:
 			var cm_int = month.find_key(current_month)
@@ -81,7 +81,7 @@ func _on_timer_timeout() -> void:
 				year += 1
 				nm_int = 1
 			current_month = month.get(nm_int)
-			month_day = 0
+			month_day = 1
 		
 		
 		date_label.text = current_month + " " + str(month_day)+ ", " + str(year)
